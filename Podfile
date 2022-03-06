@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+platform :ios, '13.0'
 
 target 'Awaker' do
   # Comment the next line if you don't want to use dynamic frameworks
@@ -15,6 +15,6 @@ target 'Awaker' do
 
   # MARK: - R.swift
 
-  pod 'R.swift', '6.1.0'
+  pod 'R.swift', '6.0.0'
 
 end
