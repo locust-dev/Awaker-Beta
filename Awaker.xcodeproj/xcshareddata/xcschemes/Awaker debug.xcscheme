@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DF6604EB27D4A8FC0022AE50"
-               BuildableName = "Awaker debug.app"
-               BlueprintName = "Awaker debug"
+               BlueprintIdentifier = "DFBCAC2E27D380F300A58DDF"
+               BuildableName = "Awaker.app"
+               BlueprintName = "Awaker"
                ReferencedContainer = "container:Awaker.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -44,9 +44,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "DF6604EB27D4A8FC0022AE50"
-            BuildableName = "Awaker debug.app"
-            BlueprintName = "Awaker debug"
+            BlueprintIdentifier = "DFBCAC2E27D380F300A58DDF"
+            BuildableName = "Awaker.app"
+            BlueprintName = "Awaker"
             ReferencedContainer = "container:Awaker.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -61,9 +61,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "DF6604EB27D4A8FC0022AE50"
-            BuildableName = "Awaker debug.app"
-            BlueprintName = "Awaker debug"
+            BlueprintIdentifier = "DFBCAC2E27D380F300A58DDF"
+            BuildableName = "Awaker.app"
+            BlueprintName = "Awaker"
             ReferencedContainer = "container:Awaker.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -72,7 +72,7 @@
       buildConfiguration = "Debug">
    </AnalyzeAction>
    <ArchiveAction
-      buildConfiguration = "Release"
+      buildConfiguration = "Debug"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>
