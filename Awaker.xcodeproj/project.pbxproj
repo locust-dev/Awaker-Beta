@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19CE89FE27D4C98C00D310C7 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 19CE89FD27D4C98C00D310C7 /* Kingfisher */; };
+		19CE8A0127D4C9AB00D310C7 /* MobileShipSharedFramework in Frameworks */ = {isa = PBXBuildFile; productRef = 19CE8A0027D4C9AB00D310C7 /* MobileShipSharedFramework */; };
 		669A4F81CE0A0D48A5F1FF04 /* Pods_Awaker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A2F9B67D5129FDC4A9B6D6F /* Pods_Awaker.framework */; };
 		DFBCAC3327D380F300A58DDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBCAC3227D380F300A58DDF /* AppDelegate.swift */; };
 		DFBCAC3727D380F300A58DDF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBCAC3627D380F300A58DDF /* ViewController.swift */; };
@@ -32,6 +34,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19CE89FE27D4C98C00D310C7 /* Kingfisher in Frameworks */,
+				19CE8A0127D4C9AB00D310C7 /* MobileShipSharedFramework in Frameworks */,
 				669A4F81CE0A0D48A5F1FF04 /* Pods_Awaker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -105,6 +109,10 @@
 			dependencies = (
 			);
 			name = Awaker;
+			packageProductDependencies = (
+				19CE89FD27D4C98C00D310C7 /* Kingfisher */,
+				19CE8A0027D4C9AB00D310C7 /* MobileShipSharedFramework */,
+			);
 			productName = Awaker;
 			productReference = DFBCAC2F27D380F300A58DDF /* Awaker.app */;
 			productType = "com.apple.product-type.application";
@@ -133,6 +141,10 @@
 				Base,
 			);
 			mainGroup = DFBCAC2627D380F300A58DDF;
+			packageReferences = (
+				19CE89FC27D4C98C00D310C7 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				19CE89FF27D4C9AB00D310C7 /* XCRemoteSwiftPackageReference "MobileShipSharedFramework" */,
+			);
 			productRefGroup = DFBCAC3027D380F300A58DDF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -419,6 +431,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		19CE89FC27D4C98C00D310C7 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		19CE89FF27D4C9AB00D310C7 /* XCRemoteSwiftPackageReference "MobileShipSharedFramework" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/locust-dev/MobileShipSharedFramework.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		19CE89FD27D4C98C00D310C7 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 19CE89FC27D4C98C00D310C7 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		19CE8A0027D4C9AB00D310C7 /* MobileShipSharedFramework */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 19CE89FF27D4C9AB00D310C7 /* XCRemoteSwiftPackageReference "MobileShipSharedFramework" */;
+			productName = MobileShipSharedFramework;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DFBCAC2727D380F300A58DDF /* Project object */;
 }
