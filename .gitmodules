@@ -1,0 +1,3 @@
+[submodule "Submodules/finchmoduletransitions"]
+	path = Submodules/finchmoduletransitions
+	url = https://git.finch.fm/frameworks/finchmoduletransitions
