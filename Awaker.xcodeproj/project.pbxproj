@@ -10,7 +10,6 @@
 		1936838527D64D9100BC6631 /* Assembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193682C027D64D9000BC6631 /* Assembly.swift */; };
 		1936838627D64D9100BC6631 /* ModuleTransitionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193682C127D64D9000BC6631 /* ModuleTransitionHandler.swift */; };
 		1936838727D64D9100BC6631 /* TransitionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193682C227D64D9000BC6631 /* TransitionModel.swift */; };
-		1936838F27D64D9100BC6631 /* Alertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193682D327D64D9000BC6631 /* Alertable.swift */; };
 		1936839027D64D9100BC6631 /* NLSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193682D527D64D9000BC6631 /* NLSlider.swift */; };
 		1936839127D64D9100BC6631 /* NLStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193682D627D64D9000BC6631 /* NLStackView.swift */; };
 		1936839227D64D9100BC6631 /* NLBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193682D727D64D9000BC6631 /* NLBarButtonItem.swift */; };
@@ -74,6 +73,17 @@
 		193684A227D64E3200BC6631 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1936848B27D64E3200BC6631 /* Notifications.swift */; };
 		193684A927D64E6800BC6631 /* DispatchQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193684A827D64E6800BC6631 /* DispatchQueue.swift */; };
 		193684AB27D64E7F00BC6631 /* NSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193684AA27D64E7F00BC6631 /* NSObject.swift */; };
+		193684B027D64EBC00BC6631 /* UITableVIew+RegisterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193684AC27D64EBC00BC6631 /* UITableVIew+RegisterCell.swift */; };
+		193684B127D64EBC00BC6631 /* UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193684AD27D64EBC00BC6631 /* UIStackView.swift */; };
+		193684B227D64EBC00BC6631 /* UIVIew+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193684AE27D64EBC00BC6631 /* UIVIew+Animations.swift */; };
+		193684B327D64EBC00BC6631 /* UIViewController+StatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193684AF27D64EBC00BC6631 /* UIViewController+StatusBar.swift */; };
+		193684B827D64ED900BC6631 /* KeyboardShowableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193684B727D64ED900BC6631 /* KeyboardShowableViewController.swift */; };
+		193684BC27D64EE400BC6631 /* AlertAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193684BA27D64EE400BC6631 /* AlertAction.swift */; };
+		193684BD27D64EE400BC6631 /* Alertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193684BB27D64EE400BC6631 /* Alertable.swift */; };
+		193684C027D64EEA00BC6631 /* ViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193684BE27D64EEA00BC6631 /* ViewOutput.swift */; };
+		193684C527D64F3700BC6631 /* ErrorPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193684C227D64F3700BC6631 /* ErrorPresentable.swift */; };
+		193684C627D64F3700BC6631 /* ErrorPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193684C327D64F3700BC6631 /* ErrorPlaceholder.swift */; };
+		193684C727D64F3700BC6631 /* ErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193684C427D64F3700BC6631 /* ErrorModel.swift */; };
 		19CE89FE27D4C98C00D310C7 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 19CE89FD27D4C98C00D310C7 /* Kingfisher */; };
 		669A4F81CE0A0D48A5F1FF04 /* Pods_Awaker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A2F9B67D5129FDC4A9B6D6F /* Pods_Awaker.framework */; };
 		DFBCAC3327D380F300A58DDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBCAC3227D380F300A58DDF /* AppDelegate.swift */; };
@@ -86,7 +96,6 @@
 		193682C027D64D9000BC6631 /* Assembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assembly.swift; sourceTree = "<group>"; };
 		193682C127D64D9000BC6631 /* ModuleTransitionHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModuleTransitionHandler.swift; sourceTree = "<group>"; };
 		193682C227D64D9000BC6631 /* TransitionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionModel.swift; sourceTree = "<group>"; };
-		193682D327D64D9000BC6631 /* Alertable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alertable.swift; sourceTree = "<group>"; };
 		193682D527D64D9000BC6631 /* NLSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NLSlider.swift; sourceTree = "<group>"; };
 		193682D627D64D9000BC6631 /* NLStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NLStackView.swift; sourceTree = "<group>"; };
 		193682D727D64D9000BC6631 /* NLBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NLBarButtonItem.swift; sourceTree = "<group>"; };
@@ -150,6 +159,17 @@
 		1936848B27D64E3200BC6631 /* Notifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		193684A827D64E6800BC6631 /* DispatchQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchQueue.swift; sourceTree = "<group>"; };
 		193684AA27D64E7F00BC6631 /* NSObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSObject.swift; sourceTree = "<group>"; };
+		193684AC27D64EBC00BC6631 /* UITableVIew+RegisterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableVIew+RegisterCell.swift"; sourceTree = "<group>"; };
+		193684AD27D64EBC00BC6631 /* UIStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStackView.swift; sourceTree = "<group>"; };
+		193684AE27D64EBC00BC6631 /* UIVIew+Animations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIVIew+Animations.swift"; sourceTree = "<group>"; };
+		193684AF27D64EBC00BC6631 /* UIViewController+StatusBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+StatusBar.swift"; sourceTree = "<group>"; };
+		193684B727D64ED900BC6631 /* KeyboardShowableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardShowableViewController.swift; sourceTree = "<group>"; };
+		193684BA27D64EE400BC6631 /* AlertAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertAction.swift; sourceTree = "<group>"; };
+		193684BB27D64EE400BC6631 /* Alertable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alertable.swift; sourceTree = "<group>"; };
+		193684BE27D64EEA00BC6631 /* ViewOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewOutput.swift; sourceTree = "<group>"; };
+		193684C227D64F3700BC6631 /* ErrorPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorPresentable.swift; sourceTree = "<group>"; };
+		193684C327D64F3700BC6631 /* ErrorPlaceholder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorPlaceholder.swift; sourceTree = "<group>"; };
+		193684C427D64F3700BC6631 /* ErrorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorModel.swift; sourceTree = "<group>"; };
 		4D1879FD57F00FF4B6B22836 /* Pods_Awaker_debug.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Awaker_debug.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		62142B4683D5629263BA366D /* Pods-Awaker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Awaker.debug.xcconfig"; path = "Target Support Files/Pods-Awaker/Pods-Awaker.debug.xcconfig"; sourceTree = "<group>"; };
 		7A2F9B67D5129FDC4A9B6D6F /* Pods_Awaker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Awaker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -224,21 +244,12 @@
 		193682D127D64D9000BC6631 /* FinchUI */ = {
 			isa = PBXGroup;
 			children = (
-				193682D227D64D9000BC6631 /* Alertable */,
 				193682D427D64D9000BC6631 /* NiblessClasses */,
 				193682E227D64D9000BC6631 /* ButtonWithTouchArea */,
 				193682E427D64D9000BC6631 /* Extensions */,
 				193682E627D64D9000BC6631 /* Placeholder */,
 			);
 			path = FinchUI;
-			sourceTree = "<group>";
-		};
-		193682D227D64D9000BC6631 /* Alertable */ = {
-			isa = PBXGroup;
-			children = (
-				193682D327D64D9000BC6631 /* Alertable.swift */,
-			);
-			path = Alertable;
 			sourceTree = "<group>";
 		};
 		193682D427D64D9000BC6631 /* NiblessClasses */ = {
@@ -620,6 +631,9 @@
 			children = (
 				193684A827D64E6800BC6631 /* DispatchQueue.swift */,
 				193684A727D64E6100BC6631 /* Extensions */,
+				193684B427D64EC000BC6631 /* Views */,
+				193684B527D64EC400BC6631 /* Protocols */,
+				193684B627D64ECA00BC6631 /* Error */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -627,9 +641,49 @@
 		193684A727D64E6100BC6631 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				193684AD27D64EBC00BC6631 /* UIStackView.swift */,
+				193684AC27D64EBC00BC6631 /* UITableVIew+RegisterCell.swift */,
+				193684AE27D64EBC00BC6631 /* UIVIew+Animations.swift */,
+				193684AF27D64EBC00BC6631 /* UIViewController+StatusBar.swift */,
 				193684AA27D64E7F00BC6631 /* NSObject.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		193684B427D64EC000BC6631 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				193684B727D64ED900BC6631 /* KeyboardShowableViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		193684B527D64EC400BC6631 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				193684B927D64EE400BC6631 /* Alertable */,
+				193684BE27D64EEA00BC6631 /* ViewOutput.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		193684B627D64ECA00BC6631 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				193684C427D64F3700BC6631 /* ErrorModel.swift */,
+				193684C327D64F3700BC6631 /* ErrorPlaceholder.swift */,
+				193684C227D64F3700BC6631 /* ErrorPresentable.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		193684B927D64EE400BC6631 /* Alertable */ = {
+			isa = PBXGroup;
+			children = (
+				193684BA27D64EE400BC6631 /* AlertAction.swift */,
+				193684BB27D64EE400BC6631 /* Alertable.swift */,
+			);
+			path = Alertable;
 			sourceTree = "<group>";
 		};
 		2290712064A9DDE700C957AC /* Pods */ = {
@@ -811,7 +865,6 @@
 				1936839827D64D9100BC6631 /* NLTableViewHeaderFooterView.swift in Sources */,
 				193683D727D64D9100BC6631 /* UIViewController+Modal.swift in Sources */,
 				DFBCAC3727D380F300A58DDF /* ViewController.swift in Sources */,
-				1936838F27D64D9100BC6631 /* Alertable.swift in Sources */,
 				1936838527D64D9100BC6631 /* Assembly.swift in Sources */,
 				1936839527D64D9100BC6631 /* NLButton.swift in Sources */,
 				193683D327D64D9100BC6631 /* UIColor+Hex.swift in Sources */,
@@ -823,9 +876,11 @@
 				1936839227D64D9100BC6631 /* NLBarButtonItem.swift in Sources */,
 				1936839A27D64D9100BC6631 /* NLTableViewCell.swift in Sources */,
 				193683DA27D64D9100BC6631 /* UIEdgeInsets.swift in Sources */,
+				193684B127D64EBC00BC6631 /* UIStackView.swift in Sources */,
 				193683C527D64D9100BC6631 /* TableCellConfigurator.swift in Sources */,
 				193683BD27D64D9100BC6631 /* CollectionViewManagerInput.swift in Sources */,
 				1936838727D64D9100BC6631 /* TransitionModel.swift in Sources */,
+				193684B027D64EBC00BC6631 /* UITableVIew+RegisterCell.swift in Sources */,
 				193683DB27D64D9100BC6631 /* Double+String.swift in Sources */,
 				193684A927D64E6800BC6631 /* DispatchQueue.swift in Sources */,
 				193683D627D64D9100BC6631 /* UICollectionView.swift in Sources */,
@@ -833,10 +888,12 @@
 				193683E927D64D9100BC6631 /* String+Highlighted.swift in Sources */,
 				193683C327D64D9100BC6631 /* Delegatable.swift in Sources */,
 				193683E727D64D9100BC6631 /* String+Substring.swift in Sources */,
+				193684B327D64EBC00BC6631 /* UIViewController+StatusBar.swift in Sources */,
 				193683D027D64D9100BC6631 /* UIScreen+Type.swift in Sources */,
 				1936838627D64D9100BC6631 /* ModuleTransitionHandler.swift in Sources */,
 				193683C427D64D9100BC6631 /* TableHeaderFooterConfigurator.swift in Sources */,
 				193683C127D64D9100BC6631 /* CollectionDataConverterInput.swift in Sources */,
+				193684B827D64ED900BC6631 /* KeyboardShowableViewController.swift in Sources */,
 				1936839927D64D9100BC6631 /* NLViewController.swift in Sources */,
 				1936849A27D64E3200BC6631 /* InternetConnectionReachabilityHandler.swift in Sources */,
 				1936839727D64D9100BC6631 /* NLTextField.swift in Sources */,
@@ -847,16 +904,21 @@
 				193683BE27D64D9100BC6631 /* DataConverterInput.swift in Sources */,
 				193683EA27D64D9100BC6631 /* String+Dictionary.swift in Sources */,
 				193683DE27D64D9100BC6631 /* Date+Components.swift in Sources */,
+				193684C627D64F3700BC6631 /* ErrorPlaceholder.swift in Sources */,
 				1936839027D64D9100BC6631 /* NLSlider.swift in Sources */,
 				1936839427D64D9100BC6631 /* NLPageViewController.swift in Sources */,
 				1936839E27D64D9100BC6631 /* String + Size.swift in Sources */,
 				193683E127D64D9100BC6631 /* String+RemoveWhiteSpaces.swift in Sources */,
+				193684C027D64EEA00BC6631 /* ViewOutput.swift in Sources */,
 				193683BF27D64D9100BC6631 /* CellConfigurator.swift in Sources */,
 				193683E627D64D9100BC6631 /* String+Capitalizing.swift in Sources */,
+				193684C527D64F3700BC6631 /* ErrorPresentable.swift in Sources */,
+				193684B227D64EBC00BC6631 /* UIVIew+Animations.swift in Sources */,
 				193683CE27D64D9100BC6631 /* CGFloat+Radians.swift in Sources */,
 				193683BC27D64D9100BC6631 /* CollectionCellConfigurator.swift in Sources */,
 				193683E827D64D9100BC6631 /* String+IsNumeric.swift in Sources */,
 				1936839C27D64D9100BC6631 /* NLCollectionViewCell.swift in Sources */,
+				193684BC27D64EE400BC6631 /* AlertAction.swift in Sources */,
 				193683BB27D64D9100BC6631 /* SJCenterFlowLayout.swift in Sources */,
 				1936839F27D64D9100BC6631 /* PlaceholderView.swift in Sources */,
 				193683DC27D64D9100BC6631 /* Collection+SafeSubscript.swift in Sources */,
@@ -866,10 +928,12 @@
 				193683DD27D64D9100BC6631 /* Array+ToString.swift in Sources */,
 				193683D227D64D9100BC6631 /* UIButton+BackgroundColor.swift in Sources */,
 				193683E327D64D9100BC6631 /* String+Localized.swift in Sources */,
+				193684C727D64F3700BC6631 /* ErrorModel.swift in Sources */,
 				193683D927D64D9100BC6631 /* UIStackView+AddMultipleViewsToStack.swift in Sources */,
 				193683E227D64D9100BC6631 /* String+Sizes.swift in Sources */,
 				193683CF27D64D9100BC6631 /* UIImage + Additionals.swift in Sources */,
 				193683E427D64D9100BC6631 /* String+Mask.swift in Sources */,
+				193684BD27D64EE400BC6631 /* Alertable.swift in Sources */,
 				1936839127D64D9100BC6631 /* NLStackView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
