@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Kingfisher",
+        "repositoryURL": "https://github.com/onevcat/Kingfisher",
+        "state": {
+          "branch": "master",
+          "revision": "5d094b48b73683d259368bbcbe4fa733e6069970",
+          "version": null
+        }
+      },
+      {
+        "package": "MobileShipSharedFramework",
+        "repositoryURL": "https://github.com/locust-dev/MobileShipSharedFramework.git",
+        "state": {
+          "branch": "main",
+          "revision": "8bb251b0fb552a6775e9ba9e903e67a45e8b1c11",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
