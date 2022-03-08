@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  Awaker
 //
-//  Created by Эльдар Гашимов on 05.03.2022.
+//  Created by MobileShip on 05.03.2022.
 //
 
 import UIKit
