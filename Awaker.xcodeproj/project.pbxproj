@@ -74,6 +74,17 @@
 		19C20B5C27D787720087ABD5 /* String+IsNumeric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C20B2E27D787720087ABD5 /* String+IsNumeric.swift */; };
 		19C20B5D27D787720087ABD5 /* String+Highlighted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C20B2F27D787720087ABD5 /* String+Highlighted.swift */; };
 		19C20B5E27D787720087ABD5 /* String+Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C20B3027D787720087ABD5 /* String+Dictionary.swift */; };
+		19C20BE227D7899C0087ABD5 /* SJCenterFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C20BCB27D7899B0087ABD5 /* SJCenterFlowLayout.swift */; };
+		19C20BE327D7899C0087ABD5 /* CollectionCellConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C20BCC27D7899B0087ABD5 /* CollectionCellConfigurator.swift */; };
+		19C20BE427D7899C0087ABD5 /* CollectionViewManagerInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C20BCD27D7899B0087ABD5 /* CollectionViewManagerInput.swift */; };
+		19C20BE527D7899C0087ABD5 /* DataConverterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C20BCF27D7899B0087ABD5 /* DataConverterInput.swift */; };
+		19C20BE627D7899C0087ABD5 /* CellConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C20BD027D7899B0087ABD5 /* CellConfigurator.swift */; };
+		19C20BE727D7899C0087ABD5 /* Configurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C20BD127D7899B0087ABD5 /* Configurable.swift */; };
+		19C20BE827D7899C0087ABD5 /* CollectionDataConverterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C20BD227D7899B0087ABD5 /* CollectionDataConverterInput.swift */; };
+		19C20BE927D7899C0087ABD5 /* Setupable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C20BD327D7899B0087ABD5 /* Setupable.swift */; };
+		19C20BEA27D7899C0087ABD5 /* Delegatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C20BD427D7899B0087ABD5 /* Delegatable.swift */; };
+		19C20BEB27D7899C0087ABD5 /* TableHeaderFooterConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C20BD627D7899B0087ABD5 /* TableHeaderFooterConfigurator.swift */; };
+		19C20BEC27D7899C0087ABD5 /* TableCellConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C20BD727D7899B0087ABD5 /* TableCellConfigurator.swift */; };
 		19CE89FE27D4C98C00D310C7 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 19CE89FD27D4C98C00D310C7 /* Kingfisher */; };
 		669A4F81CE0A0D48A5F1FF04 /* Pods_Awaker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A2F9B67D5129FDC4A9B6D6F /* Pods_Awaker.framework */; };
 		DFBCAC3327D380F300A58DDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBCAC3227D380F300A58DDF /* AppDelegate.swift */; };
@@ -150,6 +161,17 @@
 		19C20B2E27D787720087ABD5 /* String+IsNumeric.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+IsNumeric.swift"; sourceTree = "<group>"; };
 		19C20B2F27D787720087ABD5 /* String+Highlighted.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Highlighted.swift"; sourceTree = "<group>"; };
 		19C20B3027D787720087ABD5 /* String+Dictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Dictionary.swift"; sourceTree = "<group>"; };
+		19C20BCB27D7899B0087ABD5 /* SJCenterFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJCenterFlowLayout.swift; sourceTree = "<group>"; };
+		19C20BCC27D7899B0087ABD5 /* CollectionCellConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionCellConfigurator.swift; sourceTree = "<group>"; };
+		19C20BCD27D7899B0087ABD5 /* CollectionViewManagerInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewManagerInput.swift; sourceTree = "<group>"; };
+		19C20BCF27D7899B0087ABD5 /* DataConverterInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataConverterInput.swift; sourceTree = "<group>"; };
+		19C20BD027D7899B0087ABD5 /* CellConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellConfigurator.swift; sourceTree = "<group>"; };
+		19C20BD127D7899B0087ABD5 /* Configurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configurable.swift; sourceTree = "<group>"; };
+		19C20BD227D7899B0087ABD5 /* CollectionDataConverterInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionDataConverterInput.swift; sourceTree = "<group>"; };
+		19C20BD327D7899B0087ABD5 /* Setupable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Setupable.swift; sourceTree = "<group>"; };
+		19C20BD427D7899B0087ABD5 /* Delegatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Delegatable.swift; sourceTree = "<group>"; };
+		19C20BD627D7899B0087ABD5 /* TableHeaderFooterConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableHeaderFooterConfigurator.swift; sourceTree = "<group>"; };
+		19C20BD727D7899B0087ABD5 /* TableCellConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableCellConfigurator.swift; sourceTree = "<group>"; };
 		4D1879FD57F00FF4B6B22836 /* Pods_Awaker_debug.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Awaker_debug.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		62142B4683D5629263BA366D /* Pods-Awaker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Awaker.debug.xcconfig"; path = "Target Support Files/Pods-Awaker/Pods-Awaker.debug.xcconfig"; sourceTree = "<group>"; };
 		7A2F9B67D5129FDC4A9B6D6F /* Pods_Awaker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Awaker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -178,6 +200,7 @@
 		193682BB27D64D9000BC6631 /* Submodules */ = {
 			isa = PBXGroup;
 			children = (
+				19C20BC127D7899B0087ABD5 /* finchlists */,
 				19C20AF627D787720087ABD5 /* finchextensions */,
 				19C20AC427D7875E0087ABD5 /* finchcore */,
 				19C20A8227D786600087ABD5 /* finchui */,
@@ -599,6 +622,72 @@
 			path = String;
 			sourceTree = "<group>";
 		};
+		19C20BC127D7899B0087ABD5 /* finchlists */ = {
+			isa = PBXGroup;
+			children = (
+				19C20BC727D7899B0087ABD5 /* FinchLists */,
+			);
+			path = finchlists;
+			sourceTree = "<group>";
+		};
+		19C20BC727D7899B0087ABD5 /* FinchLists */ = {
+			isa = PBXGroup;
+			children = (
+				19C20BC827D7899B0087ABD5 /* Lists */,
+			);
+			path = FinchLists;
+			sourceTree = "<group>";
+		};
+		19C20BC827D7899B0087ABD5 /* Lists */ = {
+			isa = PBXGroup;
+			children = (
+				19C20BC927D7899B0087ABD5 /* UICollectionView */,
+				19C20BCE27D7899B0087ABD5 /* Common */,
+				19C20BD527D7899B0087ABD5 /* UITableVIew */,
+			);
+			path = Lists;
+			sourceTree = "<group>";
+		};
+		19C20BC927D7899B0087ABD5 /* UICollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				19C20BCA27D7899B0087ABD5 /* FlowLayouts */,
+				19C20BCC27D7899B0087ABD5 /* CollectionCellConfigurator.swift */,
+				19C20BCD27D7899B0087ABD5 /* CollectionViewManagerInput.swift */,
+			);
+			path = UICollectionView;
+			sourceTree = "<group>";
+		};
+		19C20BCA27D7899B0087ABD5 /* FlowLayouts */ = {
+			isa = PBXGroup;
+			children = (
+				19C20BCB27D7899B0087ABD5 /* SJCenterFlowLayout.swift */,
+			);
+			path = FlowLayouts;
+			sourceTree = "<group>";
+		};
+		19C20BCE27D7899B0087ABD5 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				19C20BCF27D7899B0087ABD5 /* DataConverterInput.swift */,
+				19C20BD027D7899B0087ABD5 /* CellConfigurator.swift */,
+				19C20BD127D7899B0087ABD5 /* Configurable.swift */,
+				19C20BD227D7899B0087ABD5 /* CollectionDataConverterInput.swift */,
+				19C20BD327D7899B0087ABD5 /* Setupable.swift */,
+				19C20BD427D7899B0087ABD5 /* Delegatable.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		19C20BD527D7899B0087ABD5 /* UITableVIew */ = {
+			isa = PBXGroup;
+			children = (
+				19C20BD627D7899B0087ABD5 /* TableHeaderFooterConfigurator.swift */,
+				19C20BD727D7899B0087ABD5 /* TableCellConfigurator.swift */,
+			);
+			path = UITableVIew;
+			sourceTree = "<group>";
+		};
 		2290712064A9DDE700C957AC /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -794,6 +883,7 @@
 			files = (
 				19C20AB527D786600087ABD5 /* NLViewController.swift in Sources */,
 				19C20B5827D787720087ABD5 /* String+Mask.swift in Sources */,
+				19C20BE927D7899C0087ABD5 /* Setupable.swift in Sources */,
 				DFBCAC3727D380F300A58DDF /* ViewController.swift in Sources */,
 				1936838527D64D9100BC6631 /* Assembly.swift in Sources */,
 				19C20AB627D786600087ABD5 /* NLTableViewCell.swift in Sources */,
@@ -803,13 +893,18 @@
 				19C20B4727D787720087ABD5 /* UIColor+Hex.swift in Sources */,
 				DFBCAC3327D380F300A58DDF /* AppDelegate.swift in Sources */,
 				193684B127D64EBC00BC6631 /* UIStackView.swift in Sources */,
+				19C20BEB27D7899C0087ABD5 /* TableHeaderFooterConfigurator.swift in Sources */,
 				19C20B4D27D787720087ABD5 /* UIStackView+AddMultipleViewsToStack.swift in Sources */,
+				19C20BE627D7899C0087ABD5 /* CellConfigurator.swift in Sources */,
 				19C20B4F27D787720087ABD5 /* Double+String.swift in Sources */,
 				19C20B4E27D787720087ABD5 /* UIEdgeInsets.swift in Sources */,
 				19C20B4227D787720087ABD5 /* CGFloat+Radians.swift in Sources */,
 				1936838727D64D9100BC6631 /* TransitionModel.swift in Sources */,
+				19C20BEA27D7899C0087ABD5 /* Delegatable.swift in Sources */,
+				19C20BE727D7899C0087ABD5 /* Configurable.swift in Sources */,
 				19C20B4C27D787720087ABD5 /* UIViewController + Navigation.swift in Sources */,
 				193684B027D64EBC00BC6631 /* UITableVIew+RegisterCell.swift in Sources */,
+				19C20BE327D7899C0087ABD5 /* CollectionCellConfigurator.swift in Sources */,
 				193684A927D64E6800BC6631 /* DispatchQueue.swift in Sources */,
 				19C20ABA27D786600087ABD5 /* String + Size.swift in Sources */,
 				19C20B5B27D787720087ABD5 /* String+Substring.swift in Sources */,
@@ -831,6 +926,7 @@
 				19C20B4327D787720087ABD5 /* UIImage + Additionals.swift in Sources */,
 				19C20B4B27D787720087ABD5 /* UIViewController+Modal.swift in Sources */,
 				193684B227D64EBC00BC6631 /* UIVIew+Animations.swift in Sources */,
+				19C20BE527D7899C0087ABD5 /* DataConverterInput.swift in Sources */,
 				19C20AB227D786600087ABD5 /* NLControl.swift in Sources */,
 				19C20B5927D787720087ABD5 /* String+HTMLAttributed.swift in Sources */,
 				19C20B5627D787720087ABD5 /* String+Sizes.swift in Sources */,
@@ -843,6 +939,7 @@
 				193684AB27D64E7F00BC6631 /* NSObject.swift in Sources */,
 				19C20B5A27D787720087ABD5 /* String+Capitalizing.swift in Sources */,
 				19C20AB027D786600087ABD5 /* NLPageViewController.swift in Sources */,
+				19C20BE227D7899C0087ABD5 /* SJCenterFlowLayout.swift in Sources */,
 				19C20B4427D787720087ABD5 /* UIScreen+Type.swift in Sources */,
 				193684C727D64F3700BC6631 /* ErrorModel.swift in Sources */,
 				19C20AE927D7875E0087ABD5 /* InternetConnectionReachability.swift in Sources */,
@@ -851,11 +948,14 @@
 				19C20A3F27D775350087ABD5 /* R.generated.swift in Sources */,
 				19C20AAE27D786600087ABD5 /* NLBarButtonItem.swift in Sources */,
 				19C20B5527D787720087ABD5 /* String+RemoveWhiteSpaces.swift in Sources */,
+				19C20BEC27D7899C0087ABD5 /* TableCellConfigurator.swift in Sources */,
 				19C20B5027D787720087ABD5 /* Collection+SafeSubscript.swift in Sources */,
 				19C20B5727D787720087ABD5 /* String+Localized.swift in Sources */,
 				19C20B5E27D787720087ABD5 /* String+Dictionary.swift in Sources */,
+				19C20BE827D7899C0087ABD5 /* CollectionDataConverterInput.swift in Sources */,
 				19C20AEB27D7875E0087ABD5 /* InternetConnectionReachabilityCenter.swift in Sources */,
 				19C20B5327D787720087ABD5 /* Dictionary+StringFromHTTPParameters.swift in Sources */,
+				19C20BE427D7899C0087ABD5 /* CollectionViewManagerInput.swift in Sources */,
 				19C20AB727D786600087ABD5 /* NLView.swift in Sources */,
 				19C20ABB27D786600087ABD5 /* PlaceholderView.swift in Sources */,
 				193684BD27D64EE400BC6631 /* Alertable.swift in Sources */,

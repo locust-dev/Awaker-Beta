@@ -13,3 +13,6 @@
 [submodule "finchcore"]
 	path = finchcore
 	url = https://git.finch.fm/frameworks/finchcore
+[submodule "Submodules/finchlists"]
+	path = Submodules/finchlists
+	url = https://git.finch.fm/frameworks/finchlists
