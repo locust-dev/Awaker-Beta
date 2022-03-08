@@ -1,0 +1,18 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'FinchCore' do
+  
+  use_frameworks!
+
+  pod 'SwiftLint'
+
+  #GraphQL
+  pod 'Apollo', '~> 0.43.0'
+
+  target 'FinchCoreTests' do
+    # Pods for testing
+  end
+
+end
+
