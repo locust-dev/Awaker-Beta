@@ -16,3 +16,12 @@
 [submodule "Submodules/finchlists"]
 	path = Submodules/finchlists
 	url = https://git.finch.fm/frameworks/finchlists
+[submodule "Submodules/finchcore"]
+	path = Submodules/finchcore
+	url = https://git.finch.fm/frameworks/finchcore
+[submodule "Submodules/finchextensions"]
+	path = Submodules/finchextensions
+	url = https://git.finch.fm/frameworks/finchextensions
+[submodule "Submodules/finchui"]
+	path = Submodules/finchui
+	url = https://git.finch.fm/frameworks/finchui
