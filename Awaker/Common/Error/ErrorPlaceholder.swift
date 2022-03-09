@@ -1,6 +1,6 @@
 //
 //  ErrorPlaceholder.swift
-//  Questionnaire
+//  MobileShip
 //
 //  Created by Ilya Turin on 16.12.2021.
 //

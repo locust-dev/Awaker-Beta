@@ -1,6 +1,6 @@
 //
 //  DispatchQueue.swift
-//  Questionnaire
+//  MobileShip
 //
 //  Created by Ilya Turin on 10.12.2021.
 //

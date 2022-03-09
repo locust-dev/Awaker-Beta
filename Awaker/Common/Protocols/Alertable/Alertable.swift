@@ -1,6 +1,6 @@
 //
 //  Alertable.swift
-//  Questionnaire
+//  MobileShip
 //
 //  Created by Ilya Turin on 13.12.2021.
 //

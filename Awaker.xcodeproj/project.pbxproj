@@ -295,6 +295,21 @@
 			path = Alertable;
 			sourceTree = "<group>";
 		};
+		1996EC0527D8ACEF0063B0BB /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				DFBCAC3227D380F300A58DDF /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		1996EC0627D8ACF80063B0BB /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
 		19C20BC127D7899B0087ABD5 /* finchlists */ = {
 			isa = PBXGroup;
 			children = (
@@ -728,8 +743,9 @@
 		DFBCAC3127D380F300A58DDF /* Awaker */ = {
 			isa = PBXGroup;
 			children = (
+				1996EC0527D8ACEF0063B0BB /* AppDelegate */,
 				193684A627D64E5A00BC6631 /* Common */,
-				DFBCAC3227D380F300A58DDF /* AppDelegate.swift */,
+				1996EC0627D8ACF80063B0BB /* Modules */,
 				DFBCAC3627D380F300A58DDF /* ViewController.swift */,
 				DFBCAC3B27D380F400A58DDF /* Assets.xcassets */,
 				DFBCAC3D27D380F400A58DDF /* LaunchScreen.storyboard */,

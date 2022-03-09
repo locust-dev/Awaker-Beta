@@ -1,6 +1,6 @@
 //
 //  UIViewController+StatusBar.swift
-//  Questionnaire
+//  MobileShip
 //
 //  Created by Ilya Turin on 19.12.2021.
 //
