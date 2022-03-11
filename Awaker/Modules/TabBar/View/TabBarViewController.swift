@@ -12,9 +12,9 @@ final class TabBarViewController: UITabBarController {
     
     // MARK: - Properties
     
-    private var controllers = [UIViewController]()
-    
     let tabBarViewModel = TabBarViewModel()
+    
+    private var controllers = [UIViewController]()
     
     private let disposeBag = DisposeBag()
    
@@ -33,35 +33,36 @@ final class TabBarViewController: UITabBarController {
     
     private func setupSubscriptions() {
         
-        tabBarViewModel.modules.subscribe { moduleType in
-            switch moduleType {
-                
-            case .alarms:
-                self.setupAlarmsModule()
-                
-            case .profile:
-                self.setupProfileModule()
-            }
-            
+        tabBarViewModel.modules.subscribe {
+            self.createModule($0)
         } onCompleted: {
             self.viewControllers = self.controllers
-            
+            self.controllers.removeAll()
         }.disposed(by: disposeBag)
     }
     
     
     // MARK: - Private methods
     
-    private func setupAlarmsModule() {
+    private func createModule(_ moduleType: ModuleType) {
         
-        let module = AlarmsViewController()
-        controllers.append(module)
-    }
-    
-    private func setupProfileModule() {
+        let module: UIViewController
+        let tabBarTitle: String
         
-        let module = ProfileViewController()
-        controllers.append(module)
+        switch moduleType {
+            
+        case .alarms:
+            module = AlarmsViewController()
+            tabBarTitle = "Alarms"
+            
+        case .profile:
+            module = ProfileViewController()
+            tabBarTitle = "Profile"
+        }
+        
+        let navigationController = UINavigationController(rootViewController: module)
+        navigationController.tabBarItem.title = tabBarTitle
+        controllers.append(navigationController)
     }
     
 }

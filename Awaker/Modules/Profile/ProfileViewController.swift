@@ -10,44 +10,27 @@ import RxSwift
 
 final class ProfileViewController: NLViewController {
     
-
-    var array = [1, 2, 3]
+    // MARK: - Properties
     
-    let bag = DisposeBag()
-    var subject = PublishSubject<Int>()
+    private let tableView = UITableView()
     
-    let button = UIButton()
     
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-        super.init(nibName: nil, bundle: nil)
-        
-    }
-  
+    // MARK: - Life cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         drawSelf()
     }
     
+    
+    // MARK: - Drawing
+    
     private func drawSelf() {
        
         view.backgroundColor = .white
-        button.backgroundColor = .purple
-        tabBarItem.title   = "Profile"
         
-        let sub = subject.subscribe { event in
-            print(event)
-        }
-        
-        subject.onNext(1)
-        
-        sub.disposed(by: bag)
-      
-        subject.onNext(2)
-        
-        
-        view.addSubview(button)
-        button.autoSetDimensions(to: CGSize(width: 100, height: 100))
-        button.autoCenterInSuperview()
+        view.addSubview(tableView)
+       
     }
     
 }

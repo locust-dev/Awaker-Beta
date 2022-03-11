@@ -25,7 +25,7 @@ final class AlarmsViewController: NLViewController {
     private func drawSelf() {
         
         view.backgroundColor = .yellow
-        tabBarItem.title = "Alarms"
+        
     }
     
 }
