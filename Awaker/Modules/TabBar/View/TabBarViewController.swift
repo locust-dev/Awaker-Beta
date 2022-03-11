@@ -12,7 +12,7 @@ final class TabBarViewController: UITabBarController {
     
     // MARK: - Properties
     
-    let tabBarViewModel = TabBarViewModel()
+    let viewModel = TabBarViewModel()
     
     private var controllers = [UIViewController]()
     
@@ -25,7 +25,7 @@ final class TabBarViewController: UITabBarController {
         super.viewWillAppear(animated)
         
         setupSubscriptions()
-        tabBarViewModel.configureModules()
+        viewModel.configureModules()
     }
     
     
@@ -33,7 +33,7 @@ final class TabBarViewController: UITabBarController {
     
     private func setupSubscriptions() {
         
-        tabBarViewModel.modules.subscribe {
+        viewModel.modules.subscribe {
             self.createModule($0)
         } onCompleted: {
             self.viewControllers = self.controllers
@@ -47,21 +47,18 @@ final class TabBarViewController: UITabBarController {
     private func createModule(_ moduleType: ModuleType) {
         
         let module: UIViewController
-        let tabBarTitle: String
         
         switch moduleType {
             
         case .alarms:
             module = AlarmsViewController()
-            tabBarTitle = "Alarms"
             
         case .profile:
             module = ProfileViewController()
-            tabBarTitle = "Profile"
         }
         
         let navigationController = UINavigationController(rootViewController: module)
-        navigationController.tabBarItem.title = tabBarTitle
+        navigationController.tabBarItem.title = moduleType.title
         controllers.append(navigationController)
     }
     

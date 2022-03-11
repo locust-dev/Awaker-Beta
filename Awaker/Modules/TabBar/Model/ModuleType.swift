@@ -9,4 +9,16 @@ enum ModuleType {
     
     case alarms
     case profile
+    
+    var title: String {
+        
+        switch self {
+            
+        case .alarms:
+            return "Alarms"
+            
+        case .profile:
+            return "Profile"
+        }
+    }
 }
