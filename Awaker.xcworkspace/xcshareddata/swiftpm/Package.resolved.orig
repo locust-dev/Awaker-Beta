@@ -1,6 +1,7 @@
 {
   "pins" : [
     {
+<<<<<<< HEAD
       "identity" : "abseil-cpp-swiftpm",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/firebase/abseil-cpp-SwiftPM.git",
@@ -73,6 +74,8 @@
       }
     },
     {
+=======
+>>>>>>> dev
       "identity" : "kingfisher",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/onevcat/Kingfisher",
@@ -80,6 +83,7 @@
         "branch" : "master",
         "revision" : "5d094b48b73683d259368bbcbe4fa733e6069970"
       }
+<<<<<<< HEAD
     },
     {
       "identity" : "leveldb",
@@ -116,6 +120,8 @@
         "revision" : "e1499bc69b9040b29184f7f2996f7bab467c1639",
         "version" : "1.19.0"
       }
+=======
+>>>>>>> dev
     }
   ],
   "version" : 2

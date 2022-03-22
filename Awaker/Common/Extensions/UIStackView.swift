@@ -1,6 +1,6 @@
 //
 //  UIStackView.swift
-//  Questionnaire
+//  MobileShip
 //
 //  Created by Ilya Turin on 14.12.2021.
 //

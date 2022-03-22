@@ -1,6 +1,6 @@
 //
 //  UIVIew+Animations.swift
-//  Questionnaire
+//  MobileShip
 //
 //  Created by Ilya Turin on 04.03.2022.
 //
