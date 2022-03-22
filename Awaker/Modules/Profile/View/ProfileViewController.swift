@@ -59,8 +59,7 @@ final class ProfileViewController: NLViewController {
             .disposed(by: disposeBag)
         
         
-        output
-            .cellModel
+        output.cellModel
             .drive(tableView.rx.items(cellIdentifier: ProfileCell.className, cellType: ProfileCell.self))
         { _, title, cell in
             let model = ProfileCell.Model(title: title)
