@@ -11,7 +11,7 @@ import RxCocoa
 
 final class AlarmListViewModel {
     
-    weak var coordinator: AppCoordinator?
+    var router: AlarmListRouterInput?
     
     let cells = PublishSubject<[AlarmModel]>()
     
@@ -24,7 +24,7 @@ final class AlarmListViewModel {
     func transform(input: Input) -> Output {
         input.selectedCellIndex
             .drive(onNext: { indexPath in
-                self.coordinator?.openAlarmDetailScreen(name: self.names[safe: indexPath.row] ?? "")
+                self.router?.openAlarmDetail(name: self.names[safe: indexPath.row] ?? "")
             })
             .disposed(by: disposeBag)
         return Output(cellModels: cells.asDriver(onErrorJustReturn: []))

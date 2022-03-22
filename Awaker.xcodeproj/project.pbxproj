@@ -25,7 +25,6 @@
 		193684C727D64F3700BC6631 /* ErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193684C427D64F3700BC6631 /* ErrorModel.swift */; };
 		194E876627DA371900EE8062 /* UIViewController+Child.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194E876527DA371900EE8062 /* UIViewController+Child.swift */; };
 		194E876C27DA391800EE8062 /* ModuleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194E876B27DA391800EE8062 /* ModuleType.swift */; };
-		19559AD627E9E963000F467E /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19559AD527E9E963000F467E /* AppCoordinator.swift */; };
 		19559AE027E9E975000F467E /* AlarmListSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19559AD827E9E975000F467E /* AlarmListSectionModel.swift */; };
 		19559AE127E9E975000F467E /* AlarmListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19559AD927E9E975000F467E /* AlarmListViewModel.swift */; };
 		19559AE227E9E975000F467E /* WeekDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19559ADA27E9E975000F467E /* WeekDay.swift */; };
@@ -143,6 +142,7 @@
 		19C20CC727D78A9B0087ABD5 /* PlaceholderAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19C20CA627D78A9B0087ABD5 /* PlaceholderAssets.xcassets */; };
 		19C95A5627E3321900A31746 /* VIewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C95A5527E3321900A31746 /* VIewModelType.swift */; };
 		669A4F81CE0A0D48A5F1FF04 /* Pods_Awaker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A2F9B67D5129FDC4A9B6D6F /* Pods_Awaker.framework */; };
+		DF02E82E27EA2273001F99BD /* AlarmListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF02E82D27EA2273001F99BD /* AlarmListRouter.swift */; };
 		DFBCAC3327D380F300A58DDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBCAC3227D380F300A58DDF /* AppDelegate.swift */; };
 		DFBCAC3C27D380F400A58DDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFBCAC3B27D380F400A58DDF /* Assets.xcassets */; };
 		DFBCAC3F27D380F400A58DDF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFBCAC3D27D380F400A58DDF /* LaunchScreen.storyboard */; };
@@ -167,7 +167,6 @@
 		193684C427D64F3700BC6631 /* ErrorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorModel.swift; sourceTree = "<group>"; };
 		194E876527DA371900EE8062 /* UIViewController+Child.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Child.swift"; sourceTree = "<group>"; };
 		194E876B27DA391800EE8062 /* ModuleType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleType.swift; sourceTree = "<group>"; };
-		19559AD527E9E963000F467E /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		19559AD827E9E975000F467E /* AlarmListSectionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmListSectionModel.swift; sourceTree = "<group>"; };
 		19559AD927E9E975000F467E /* AlarmListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmListViewModel.swift; sourceTree = "<group>"; };
 		19559ADA27E9E975000F467E /* WeekDay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekDay.swift; sourceTree = "<group>"; };
@@ -260,6 +259,7 @@
 		62142B4683D5629263BA366D /* Pods-Awaker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Awaker.debug.xcconfig"; path = "Target Support Files/Pods-Awaker/Pods-Awaker.debug.xcconfig"; sourceTree = "<group>"; };
 		7A2F9B67D5129FDC4A9B6D6F /* Pods_Awaker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Awaker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B65834E6D02930D852C314C /* Pods-Awaker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Awaker.release.xcconfig"; path = "Target Support Files/Pods-Awaker/Pods-Awaker.release.xcconfig"; sourceTree = "<group>"; };
+		DF02E82D27EA2273001F99BD /* AlarmListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmListRouter.swift; sourceTree = "<group>"; };
 		DFBCAC2F27D380F300A58DDF /* Awaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Awaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFBCAC3227D380F300A58DDF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFBCAC3B27D380F400A58DDF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -464,6 +464,7 @@
 				19559ADA27E9E975000F467E /* WeekDay.swift */,
 				19559ADB27E9E975000F467E /* AlarmListViewController.swift */,
 				19559ADC27E9E975000F467E /* AlarmCell.swift */,
+				DF02E82D27EA2273001F99BD /* AlarmListRouter.swift */,
 			);
 			path = AlarmList;
 			sourceTree = "<group>";
@@ -492,7 +493,6 @@
 			isa = PBXGroup;
 			children = (
 				DFBCAC3227D380F300A58DDF /* AppDelegate.swift */,
-				19559AD527E9E963000F467E /* AppCoordinator.swift */,
 			);
 			path = AppDelegate;
 			sourceTree = "<group>";
@@ -1259,6 +1259,7 @@
 				19B844AF27DB95CB00203A23 /* CommonTableView.swift in Sources */,
 				19B844A527DB53B000203A23 /* ProfileViewModel.swift in Sources */,
 				19C20C8227D78A8E0087ABD5 /* String+Sizes.swift in Sources */,
+				DF02E82E27EA2273001F99BD /* AlarmListRouter.swift in Sources */,
 				193684B227D64EBC00BC6631 /* UIVIew+Animations.swift in Sources */,
 				19C20BE527D7899C0087ABD5 /* DataConverterInput.swift in Sources */,
 				193684BC27D64EE400BC6631 /* AlertAction.swift in Sources */,
@@ -1276,7 +1277,6 @@
 				19C20CBE27D78A9B0087ABD5 /* NLTextField.swift in Sources */,
 				19C20C7A27D78A8E0087ABD5 /* UIEdgeInsets.swift in Sources */,
 				19559AE627E9E975000F467E /* AlarmDetailViewModel.swift in Sources */,
-				19559AD627E9E963000F467E /* AppCoordinator.swift in Sources */,
 				19C20A3F27D775350087ABD5 /* R.generated.swift in Sources */,
 				19C20C7427D78A8E0087ABD5 /* UIView+AddSubViews.swift in Sources */,
 				19B844B527DB969500203A23 /* ProgressHUDContainer.swift in Sources */,
