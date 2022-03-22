@@ -6,14 +6,14 @@
 //
 
 import RxSwift
+import RxCocoa
 
 final class ProfileViewModel {
     
     // MARK: - Properties
     
-    let isLoading = PublishSubject<Bool>()
-    let cellModel = PublishSubject<[String]>()
-    
+    private let isLoading = BehaviorSubject<Bool>(value: false)
+    private let cellModel = PublishSubject<[String]>()
     private let databaseService = DatabaseService()
     
     
@@ -23,23 +23,41 @@ final class ProfileViewModel {
         
         isLoading.onNext(true)
         
-        globalQueue(delay: 2) {
+        databaseService.getData(.profile, modelType: ProfileModel.self) { [weak self] result in
             
-            self.databaseService.getData(.profile, modelType: ProfileModel.self) { [weak self] result in
+            switch result {
                 
-                switch result {
-                    
-                case .success(let profileModel):
-                    self?.cellModel.onNext(profileModel.cells)
-                    
-                case .failure(_):
-                    break
-                }
+            case .success(let profileModel):
+                self?.cellModel.onNext(profileModel.cells)
                 
-                self?.isLoading.onNext(false)
+            case .failure(_):
+                break
             }
+            
+            self?.isLoading.onNext(false)
         }
-        
     }
     
+}
+
+
+// MARK: - ViewModelType
+extension ProfileViewModel: ViewModelType {
+    
+    struct Input {
+        let cellIndex: Driver<IndexPath>
+    }
+    
+    struct Output {
+        let cellModel: Driver<[String]>
+        let isLoading: Driver<Bool>
+    }
+    
+    func transform(input: Input) -> Output {
+ 
+        let cellModel = cellModel.asDriver(onErrorJustReturn: [])
+        let isLoading = isLoading.asDriver(onErrorJustReturn: false)
+        
+        return Output(cellModel: cellModel, isLoading: isLoading)
+    }
 }

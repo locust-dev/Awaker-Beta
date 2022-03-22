@@ -25,7 +25,6 @@
 		193684C727D64F3700BC6631 /* ErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193684C427D64F3700BC6631 /* ErrorModel.swift */; };
 		194E876627DA371900EE8062 /* UIViewController+Child.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194E876527DA371900EE8062 /* UIViewController+Child.swift */; };
 		194E876C27DA391800EE8062 /* ModuleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194E876B27DA391800EE8062 /* ModuleType.swift */; };
-		194E876E27DA3E2800EE8062 /* AlarmsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194E876D27DA3E2800EE8062 /* AlarmsViewController.swift */; };
 		1983D7A427D8C1BE003D56D8 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1983D7A327D8C1BE003D56D8 /* TabBarViewController.swift */; };
 		1983D7A627D8C1E1003D56D8 /* TabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1983D7A527D8C1E1003D56D8 /* TabBarViewModel.swift */; };
 		1983D7A827D8C923003D56D8 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1983D7A727D8C923003D56D8 /* ProfileViewController.swift */; };
@@ -129,6 +128,7 @@
 		19C20CC527D78A9B0087ABD5 /* String + Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C20CA327D78A9B0087ABD5 /* String + Size.swift */; };
 		19C20CC627D78A9B0087ABD5 /* PlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C20CA527D78A9B0087ABD5 /* PlaceholderView.swift */; };
 		19C20CC727D78A9B0087ABD5 /* PlaceholderAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19C20CA627D78A9B0087ABD5 /* PlaceholderAssets.xcassets */; };
+		19C95A5627E3321900A31746 /* VIewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C95A5527E3321900A31746 /* VIewModelType.swift */; };
 		19CE89FE27D4C98C00D310C7 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 19CE89FD27D4C98C00D310C7 /* Kingfisher */; };
 		669A4F81CE0A0D48A5F1FF04 /* Pods_Awaker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A2F9B67D5129FDC4A9B6D6F /* Pods_Awaker.framework */; };
 		DFBCAC3327D380F300A58DDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBCAC3227D380F300A58DDF /* AppDelegate.swift */; };
@@ -155,7 +155,6 @@
 		193684C427D64F3700BC6631 /* ErrorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorModel.swift; sourceTree = "<group>"; };
 		194E876527DA371900EE8062 /* UIViewController+Child.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Child.swift"; sourceTree = "<group>"; };
 		194E876B27DA391800EE8062 /* ModuleType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleType.swift; sourceTree = "<group>"; };
-		194E876D27DA3E2800EE8062 /* AlarmsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmsViewController.swift; sourceTree = "<group>"; };
 		1983D7A327D8C1BE003D56D8 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		1983D7A527D8C1E1003D56D8 /* TabBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewModel.swift; sourceTree = "<group>"; };
 		1983D7A727D8C923003D56D8 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -234,6 +233,7 @@
 		19C20CA327D78A9B0087ABD5 /* String + Size.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String + Size.swift"; sourceTree = "<group>"; };
 		19C20CA527D78A9B0087ABD5 /* PlaceholderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceholderView.swift; sourceTree = "<group>"; };
 		19C20CA627D78A9B0087ABD5 /* PlaceholderAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = PlaceholderAssets.xcassets; sourceTree = "<group>"; };
+		19C95A5527E3321900A31746 /* VIewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIewModelType.swift; sourceTree = "<group>"; };
 		4D1879FD57F00FF4B6B22836 /* Pods_Awaker_debug.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Awaker_debug.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		62142B4683D5629263BA366D /* Pods-Awaker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Awaker.debug.xcconfig"; path = "Target Support Files/Pods-Awaker/Pods-Awaker.debug.xcconfig"; sourceTree = "<group>"; };
 		7A2F9B67D5129FDC4A9B6D6F /* Pods_Awaker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Awaker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -324,6 +324,7 @@
 		193684A627D64E5A00BC6631 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				19C95A5527E3321900A31746 /* VIewModelType.swift */,
 				193684A827D64E6800BC6631 /* DispatchQueue.swift */,
 				193684A727D64E6100BC6631 /* Extensions */,
 				193684B427D64EC000BC6631 /* Views */,
@@ -419,14 +420,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		194E876F27DA455500EE8062 /* Alarms */ = {
-			isa = PBXGroup;
-			children = (
-				194E876D27DA3E2800EE8062 /* AlarmsViewController.swift */,
-			);
-			path = Alarms;
-			sourceTree = "<group>";
-		};
 		194E877027DA455E00EE8062 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
@@ -440,7 +433,6 @@
 		1983D7A227D8C19D003D56D8 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				194E876F27DA455500EE8062 /* Alarms */,
 				194E877027DA455E00EE8062 /* Profile */,
 				194E876727DA38BA00EE8062 /* TabBar */,
 			);
@@ -1200,7 +1192,7 @@
 				19C20C8A27D78A8E0087ABD5 /* String+Dictionary.swift in Sources */,
 				19B8449E27DB4F8E00203A23 /* DatabaseService.swift in Sources */,
 				193684C527D64F3700BC6631 /* ErrorPresentable.swift in Sources */,
-				194E876E27DA3E2800EE8062 /* AlarmsViewController.swift in Sources */,
+				19C95A5627E3321900A31746 /* VIewModelType.swift in Sources */,
 				19C20C7627D78A8E0087ABD5 /* UICollectionView.swift in Sources */,
 				19C20CC027D78A9B0087ABD5 /* NLViewController.swift in Sources */,
 				194E876627DA371900EE8062 /* UIViewController+Child.swift in Sources */,
