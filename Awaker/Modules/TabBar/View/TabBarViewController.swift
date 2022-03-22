@@ -51,7 +51,8 @@ final class TabBarViewController: UITabBarController {
         switch moduleType {
             
         case .alarms:
-            module = UIViewController()
+            module = AlarmListViewController()
+            (module as? AlarmListViewController)?.viewModel = AlarmListViewModel()
             
         case .profile:
             module = ProfileViewController()

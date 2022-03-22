@@ -19,7 +19,8 @@ final class TabBarViewModel {
     
     func configureModules() {
         
-        modules.onNext(ModuleType.profile)
+        modules.onNext(.alarms)
+        modules.onNext(.profile)
         modules.onCompleted()
     }
     
