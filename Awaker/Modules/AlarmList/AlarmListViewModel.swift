@@ -11,22 +11,22 @@ import RxCocoa
 
 final class AlarmListViewModel {
     
-    weak var coordinator: AppCoordinator?
+    // MARK: - Properties
     
     let cells = PublishSubject<[AlarmModel]>()
+    let selectedAlarmModel = PublishSubject<AlarmModel>()
     
     let disposeBag = DisposeBag()
     
     private let names = ["рукоблуд", "ссанина", "очко", "блядун", "вагина"]
     
+    
     // MARK: - Public methods
     
     func transform(input: Input) -> Output {
-        input.selectedCellIndex
-            .drive(onNext: { indexPath in
-                self.coordinator?.openAlarmDetailScreen(name: self.names[safe: indexPath.row] ?? "")
-            })
-            .disposed(by: disposeBag)
+        
+        
+        
         return Output(cellModels: cells.asDriver(onErrorJustReturn: []))
     }
     
