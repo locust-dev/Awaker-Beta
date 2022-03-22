@@ -10,22 +10,36 @@ import RxCocoa
 
 final class AlarmDetailViewModel {
     
-    let name = BehaviorSubject<String>(value: "error")
+    // MARK: - Properties
     
-    func transform(input: Input) -> Output {
-        Output(name: name.asDriver(onErrorJustReturn: "error"))
+    private let cells = Observable.from([AlarmDetailTableModel.allCases])
+    private let bag = DisposeBag()
+    
+    
+    func configureCells() {
+        
+        
     }
-    
 }
 
-extension AlarmDetailViewModel {
+
+//MARK: - ViewModelType
+extension AlarmDetailViewModel: ViewModelType {
     
     struct Input {
         
     }
     
     struct Output {
-        let name: Driver<String>
+        let cells: Driver<[AlarmDetailTableModel]>
+    }
+    
+    func transform(input: Input) -> Output {
+        
+      
+
+        
+        return Output(cells: cells.asDriver(onErrorJustReturn: []))
     }
     
 }

@@ -11,7 +11,7 @@ struct Alarm {
     
     typealias Sound = String
     
-    let alarmName: String
+    let name: String
     
     /// Время пробуждения в формате 00 : 00
     let time: Date

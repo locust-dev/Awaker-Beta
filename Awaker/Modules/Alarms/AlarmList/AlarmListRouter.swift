@@ -33,7 +33,6 @@ extension AlarmListRouter: AlarmListRouterInput {
         let view = AlarmDetailViewController()
         view.viewModel = viewModel
         transition.present(viewController: view, animated: true)
-        viewModel.name.onNext(name)
     }
     
 }
