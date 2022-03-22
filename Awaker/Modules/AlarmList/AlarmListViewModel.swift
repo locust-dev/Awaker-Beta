@@ -10,11 +10,12 @@ import RxSwift
 import RxCocoa
 
 final class AlarmListViewModel {
-    
+
     // MARK: - Properties
+
+    var router: AlarmListRouterInput?
     
     let cells = PublishSubject<[AlarmModel]>()
-    let selectedAlarmModel = PublishSubject<AlarmModel>()
     
     let disposeBag = DisposeBag()
     
@@ -24,9 +25,11 @@ final class AlarmListViewModel {
     // MARK: - Public methods
     
     func transform(input: Input) -> Output {
-        
-        
-        
+        input.selectedCellIndex
+            .drive(onNext: { indexPath in
+                self.router?.openAlarmDetail(name: self.names[safe: indexPath.row] ?? "")
+            })
+            .disposed(by: disposeBag)
         return Output(cellModels: cells.asDriver(onErrorJustReturn: []))
     }
     

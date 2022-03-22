@@ -52,7 +52,10 @@ final class TabBarViewController: UITabBarController {
             
         case .alarms:
             module = AlarmListViewController()
-            (module as? AlarmListViewController)?.viewModel = AlarmListViewModel()
+            let router = AlarmListRouter(transition: module)
+            let viewModel = AlarmListViewModel()
+            viewModel.router = router
+            (module as? AlarmListViewController)?.viewModel = viewModel
             
         case .profile:
             module = ProfileViewController()
