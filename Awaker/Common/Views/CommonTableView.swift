@@ -13,9 +13,19 @@ final class CommonTableView: UITableView {
     
     // MARK: - Properties
     
-    var isLoading = BehaviorSubject<Bool>(value: false)
-    var loaderColor = BehaviorSubject<UIColor>(value: .blue)
-    var refreshControlColor = BehaviorSubject<UIColor>(value: .blue)
+    var isLoading = BehaviorSubject(value: false)
+    var loaderColor = BehaviorSubject(value: UIColor.blue)
+    var refreshControlColor = BehaviorSubject(value: UIColor.blue)
+    
+    var refreshControlIsEnabled: Bool = false {
+        didSet {
+            if refreshControlIsEnabled {
+                customRefreshControl.setupWith(view: self, moduleOutput: refreshModuleOutput)
+            } else {
+                refreshControl = nil
+            }
+        }
+    }
     
     weak var refreshModuleOutput: RefreshControlModuleOutput?
     
@@ -30,7 +40,6 @@ final class CommonTableView: UITableView {
         super.init(frame: frame, style: style)
         
         backgroundColor = .clear
-        customRefreshControl.setupWith(view: self, moduleOutput: refreshModuleOutput)
         setupSubscriptions()
     }
     

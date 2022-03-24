@@ -36,7 +36,7 @@ final class AlarmListViewModel {
     func fetchCellNames() {
         let alarmModels = names.map { Alarm(name: $0,
                                             time: Date(),
-                                            activeDays: nil,
+                                            activeDays: [],
                                             terminateMethod: nil,
                                             volume: 0,
                                             sound: "",
