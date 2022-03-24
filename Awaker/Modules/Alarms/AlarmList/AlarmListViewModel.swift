@@ -15,7 +15,7 @@ final class AlarmListViewModel {
 
     var router: AlarmListRouterInput?
     
-    let cells = PublishSubject<[AlarmModel]>()
+    let cells = PublishSubject<[Alarm]>()
     
     let disposeBag = DisposeBag()
     
@@ -34,7 +34,15 @@ final class AlarmListViewModel {
     }
     
     func fetchCellNames() {
-        let alarmModels = names.map { AlarmModel(name: $0)}
+        let alarmModels = names.map { Alarm(name: $0,
+                                            time: Date(),
+                                            activeDays: nil,
+                                            terminateMethod: nil,
+                                            volume: 0,
+                                            sound: "",
+                                            repeatDelay: 0)
+        }
+        
         cells.onNext(alarmModels)
     }
     
@@ -47,7 +55,7 @@ extension AlarmListViewModel {
     }
     
     struct Output {
-        let cellModels: Driver<[AlarmModel]>
+        let cellModels: Driver<[Alarm]>
     }
     
 }

@@ -11,7 +11,6 @@ import PureLayout
 import RxSwift
 import RxCocoa
 
-
 final class AlarmListViewController: NLViewController {
     
     // MARK: - Properties
@@ -30,18 +29,6 @@ final class AlarmListViewController: NLViewController {
         viewModel?.fetchCellNames()
     }
     
-    private func drawSelf() {
-        
-        view.setGradientBackground(with: [Colors.darkPurple(), Colors.lightPurple()])
-        
-        tableView.backgroundColor = .clear
-        tableView.separatorStyle = .none
-        tableView.register(AlarmCell.self)
-        view.addSubview(tableView)
-        
-        tableView.autoPinEdgesToSuperviewEdges()
-    }
-    
     private func bind() {
         
         let input = AlarmListViewModel.Input(selectedCellIndex: tableView.rx.itemSelected.asDriver())
@@ -50,8 +37,23 @@ final class AlarmListViewController: NLViewController {
         
         output?.cellModels.drive(tableView.rx.items(cellIdentifier: AlarmCell.className,
                                                     cellType: AlarmCell.self)) { _, model, cell in
-            let model = AlarmCell.Model(name: model.name)
-            cell.configure(with: model)
+            cell.nameLabel.text = model.name
+            cell.timeLabel.text = model.time.dateStringWithFormat(.minHours)
+            
         }.disposed(by: disposeBag)
+    }
+    
+    private func drawSelf() {
+        
+        navigationController?.navigationBar.isHidden = true
+        
+        view.backgroundColor = Colors.darkPurple()
+        
+        tableView.backgroundColor = .clear
+        tableView.separatorStyle = .none
+        tableView.register(AlarmCell.self)
+        view.addSubview(tableView)
+        
+        tableView.autoPinEdgesToSuperviewEdges()
     }
 }
