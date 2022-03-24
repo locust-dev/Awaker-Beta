@@ -1,5 +1,5 @@
 //
-//  AlarmVolumeCell.swift
+//  AlarmRepeatDelayCell.swift
 //  Awaker
 //
 //  Created by Ilya Turin on 22.03.2022.
@@ -8,7 +8,7 @@
 import UIKit
 import PureLayout
 
-final class AlarmVolumeCell: NLTableViewCell {
+final class AlarmRepeatDelayCell: NLTableViewCell {
     
     // MARK: - Properties
     
@@ -32,4 +32,16 @@ final class AlarmVolumeCell: NLTableViewCell {
         
     }
     
+}
+
+extension AlarmRepeatDelayCell: Configurable {
+    
+    struct Model {
+        
+        let title: String
+    }
+    
+    func configure(with model: Model) {
+        titleLabel.text = model.title
+    }
 }

@@ -8,11 +8,24 @@
 import UIKit
 import PureLayout
 
+import RxSwift
+import RxCocoa
+
 final class AlarmTitleCell: NLTableViewCell {
     
     // MARK: - Properties
     
     private let titleLabel = UILabel()
+    private var disposeBag: DisposeBag?
+    
+    
+    // MARK: - Life cycle
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+        disposeBag = nil
+    }
     
     
     // MARK: - Init
@@ -29,7 +42,19 @@ final class AlarmTitleCell: NLTableViewCell {
     
         contentView.addSubview(titleLabel)
         
-        
+        titleLabel.autoPinEdgesToSuperviewEdges()
     }
     
+}
+
+extension AlarmTitleCell: Configurable {
+    
+    struct Model {
+        
+        let title: String
+    }
+    
+    func configure(with model: Model) {
+        titleLabel.text = model.title
+    }
 }

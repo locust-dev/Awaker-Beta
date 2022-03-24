@@ -59,6 +59,8 @@ final class TabBarViewController: UITabBarController {
             
         case .profile:
             module = ProfileViewController()
+            let viewModel = ProfileViewModel()
+            (module as? ProfileViewController)?.viewModel = viewModel
         }
         
         let navigationController = UINavigationController(rootViewController: module)

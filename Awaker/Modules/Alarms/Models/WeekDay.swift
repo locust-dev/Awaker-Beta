@@ -44,4 +44,21 @@ enum WeekDay: CaseIterable {
         }
     }
     
+    var isWorkDay: Bool {
+        
+        switch self {
+            
+        case .monday,
+                .tuesday,
+                .wednesday,
+                .thursday,
+                .friday:
+            return true
+            
+        case .saturday,
+                .sunday:
+            return false
+        }
+    }
+    
 }

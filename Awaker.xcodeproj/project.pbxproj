@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1914FE2927EC738500D698CB /* TableHeaderFooterConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1914FE2727EC738500D698CB /* TableHeaderFooterConfigurator.swift */; };
+		1914FE2A27EC738500D698CB /* TableCellConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1914FE2827EC738500D698CB /* TableCellConfigurator.swift */; };
+		1914FE2D27EC7AD200D698CB /* AlarmDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1914FE2C27EC7AD200D698CB /* AlarmDetailRouter.swift */; };
+		1914FE3127ECB7A400D698CB /* WeekDaysGetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1914FE3027ECB7A400D698CB /* WeekDaysGetter.swift */; };
 		1936838527D64D9100BC6631 /* Assembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193682C027D64D9000BC6631 /* Assembly.swift */; };
 		1936838627D64D9100BC6631 /* ModuleTransitionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193682C127D64D9000BC6631 /* ModuleTransitionHandler.swift */; };
 		1936838727D64D9100BC6631 /* TransitionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193682C227D64D9000BC6631 /* TransitionModel.swift */; };
@@ -68,7 +72,7 @@
 		19559B3127EA4CC6000F467E /* AlarmVolumeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19559B3027EA4CC6000F467E /* AlarmVolumeCell.swift */; };
 		19559B3327EA4E78000F467E /* AlarmTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19559B3227EA4E78000F467E /* AlarmTitleCell.swift */; };
 		19559B3527EA4E88000F467E /* AlarmRepeatDelayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19559B3427EA4E88000F467E /* AlarmRepeatDelayCell.swift */; };
-		19559B3727EA4F51000F467E /* AlarmDetailTableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19559B3627EA4F51000F467E /* AlarmDetailTableModel.swift */; };
+		19559B3727EA4F51000F467E /* AlarmDetailTableViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19559B3627EA4F51000F467E /* AlarmDetailTableViewItem.swift */; };
 		1983D7A427D8C1BE003D56D8 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1983D7A327D8C1BE003D56D8 /* TabBarViewController.swift */; };
 		1983D7A627D8C1E1003D56D8 /* TabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1983D7A527D8C1E1003D56D8 /* TabBarViewModel.swift */; };
 		1983D7A827D8C923003D56D8 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1983D7A727D8C923003D56D8 /* ProfileViewController.swift */; };
@@ -95,8 +99,6 @@
 		19C20BE827D7899C0087ABD5 /* CollectionDataConverterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C20BD227D7899B0087ABD5 /* CollectionDataConverterInput.swift */; };
 		19C20BE927D7899C0087ABD5 /* Setupable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C20BD327D7899B0087ABD5 /* Setupable.swift */; };
 		19C20BEA27D7899C0087ABD5 /* Delegatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C20BD427D7899B0087ABD5 /* Delegatable.swift */; };
-		19C20BEB27D7899C0087ABD5 /* TableHeaderFooterConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C20BD627D7899B0087ABD5 /* TableHeaderFooterConfigurator.swift */; };
-		19C20BEC27D7899C0087ABD5 /* TableCellConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C20BD727D7899B0087ABD5 /* TableCellConfigurator.swift */; };
 		19C20C1527D78A6F0087ABD5 /* InternetConnectionReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C20BFC27D78A6F0087ABD5 /* InternetConnectionReachability.swift */; };
 		19C20C1627D78A6F0087ABD5 /* InternetConnectionReachabilityHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C20BFD27D78A6F0087ABD5 /* InternetConnectionReachabilityHandler.swift */; };
 		19C20C1727D78A6F0087ABD5 /* InternetConnectionReachabilityCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C20BFE27D78A6F0087ABD5 /* InternetConnectionReachabilityCenter.swift */; };
@@ -156,6 +158,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1914FE2727EC738500D698CB /* TableHeaderFooterConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableHeaderFooterConfigurator.swift; sourceTree = "<group>"; };
+		1914FE2827EC738500D698CB /* TableCellConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableCellConfigurator.swift; sourceTree = "<group>"; };
+		1914FE2C27EC7AD200D698CB /* AlarmDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmDetailRouter.swift; sourceTree = "<group>"; };
+		1914FE3027ECB7A400D698CB /* WeekDaysGetter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekDaysGetter.swift; sourceTree = "<group>"; };
 		193682C027D64D9000BC6631 /* Assembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assembly.swift; sourceTree = "<group>"; };
 		193682C127D64D9000BC6631 /* ModuleTransitionHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModuleTransitionHandler.swift; sourceTree = "<group>"; };
 		193682C227D64D9000BC6631 /* TransitionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionModel.swift; sourceTree = "<group>"; };
@@ -189,7 +195,7 @@
 		19559B3027EA4CC6000F467E /* AlarmVolumeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmVolumeCell.swift; sourceTree = "<group>"; };
 		19559B3227EA4E78000F467E /* AlarmTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmTitleCell.swift; sourceTree = "<group>"; };
 		19559B3427EA4E88000F467E /* AlarmRepeatDelayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmRepeatDelayCell.swift; sourceTree = "<group>"; };
-		19559B3627EA4F51000F467E /* AlarmDetailTableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmDetailTableModel.swift; sourceTree = "<group>"; };
+		19559B3627EA4F51000F467E /* AlarmDetailTableViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmDetailTableViewItem.swift; sourceTree = "<group>"; };
 		1983D7A327D8C1BE003D56D8 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		1983D7A527D8C1E1003D56D8 /* TabBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewModel.swift; sourceTree = "<group>"; };
 		1983D7A727D8C923003D56D8 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -216,8 +222,6 @@
 		19C20BD227D7899B0087ABD5 /* CollectionDataConverterInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionDataConverterInput.swift; sourceTree = "<group>"; };
 		19C20BD327D7899B0087ABD5 /* Setupable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Setupable.swift; sourceTree = "<group>"; };
 		19C20BD427D7899B0087ABD5 /* Delegatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Delegatable.swift; sourceTree = "<group>"; };
-		19C20BD627D7899B0087ABD5 /* TableHeaderFooterConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableHeaderFooterConfigurator.swift; sourceTree = "<group>"; };
-		19C20BD727D7899B0087ABD5 /* TableCellConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableCellConfigurator.swift; sourceTree = "<group>"; };
 		19C20BFC27D78A6F0087ABD5 /* InternetConnectionReachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InternetConnectionReachability.swift; sourceTree = "<group>"; };
 		19C20BFD27D78A6F0087ABD5 /* InternetConnectionReachabilityHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InternetConnectionReachabilityHandler.swift; sourceTree = "<group>"; };
 		19C20BFE27D78A6F0087ABD5 /* InternetConnectionReachabilityCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InternetConnectionReachabilityCenter.swift; sourceTree = "<group>"; };
@@ -321,6 +325,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1914FE2627EC738500D698CB /* UITableVIew */ = {
+			isa = PBXGroup;
+			children = (
+				1914FE2727EC738500D698CB /* TableHeaderFooterConfigurator.swift */,
+				1914FE2827EC738500D698CB /* TableCellConfigurator.swift */,
+			);
+			path = UITableVIew;
+			sourceTree = "<group>";
+		};
+		1914FE2B27EC7AC800D698CB /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				1914FE2C27EC7AD200D698CB /* AlarmDetailRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		1914FE2E27ECB37E00D698CB /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				19559B2D27EA3830000F467E /* WeekDayView.swift */,
+				1914FE3027ECB7A400D698CB /* WeekDaysGetter.swift */,
+			);
+			path = Subviews;
+			sourceTree = "<group>";
+		};
+		1914FE2F27ECB38F00D698CB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				19559ADF27E9E975000F467E /* AlarmDetailViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		193682BB27D64D9000BC6631 /* Submodules */ = {
 			isa = PBXGroup;
 			children = (
@@ -486,10 +524,9 @@
 			isa = PBXGroup;
 			children = (
 				19559B3827EA4F55000F467E /* Model */,
-				19559B2F27EA4CB6000F467E /* Cells */,
 				19559B2C27EA3826000F467E /* Views */,
-				19559ADE27E9E975000F467E /* AlarmDetailViewController.swift */,
-				19559ADF27E9E975000F467E /* AlarmDetailViewModel.swift */,
+				1914FE2F27ECB38F00D698CB /* ViewModel */,
+				1914FE2B27EC7AC800D698CB /* Router */,
 			);
 			path = AlarmDetail;
 			sourceTree = "<group>";
@@ -517,7 +554,9 @@
 		19559B2C27EA3826000F467E /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				19559B2D27EA3830000F467E /* WeekDayView.swift */,
+				19559B2F27EA4CB6000F467E /* Cells */,
+				1914FE2E27ECB37E00D698CB /* Subviews */,
+				19559ADE27E9E975000F467E /* AlarmDetailViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -535,7 +574,7 @@
 		19559B3827EA4F55000F467E /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				19559B3627EA4F51000F467E /* AlarmDetailTableModel.swift */,
+				19559B3627EA4F51000F467E /* AlarmDetailTableViewItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -646,9 +685,9 @@
 		19C20BC827D7899B0087ABD5 /* Lists */ = {
 			isa = PBXGroup;
 			children = (
+				1914FE2627EC738500D698CB /* UITableVIew */,
 				19C20BC927D7899B0087ABD5 /* UICollectionView */,
 				19C20BCE27D7899B0087ABD5 /* Common */,
-				19C20BD527D7899B0087ABD5 /* UITableVIew */,
 			);
 			path = Lists;
 			sourceTree = "<group>";
@@ -682,15 +721,6 @@
 				19C20BD427D7899B0087ABD5 /* Delegatable.swift */,
 			);
 			path = Common;
-			sourceTree = "<group>";
-		};
-		19C20BD527D7899B0087ABD5 /* UITableVIew */ = {
-			isa = PBXGroup;
-			children = (
-				19C20BD627D7899B0087ABD5 /* TableHeaderFooterConfigurator.swift */,
-				19C20BD727D7899B0087ABD5 /* TableCellConfigurator.swift */,
-			);
-			path = UITableVIew;
 			sourceTree = "<group>";
 		};
 		19C20BF027D78A6F0087ABD5 /* finchcore */ = {
@@ -1245,6 +1275,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				19C20C7927D78A8E0087ABD5 /* UIStackView+AddMultipleViewsToStack.swift in Sources */,
+				1914FE2A27EC738500D698CB /* TableCellConfigurator.swift in Sources */,
 				19B844B627DB969500203A23 /* ProgressHUDSize.swift in Sources */,
 				19C20BE927D7899C0087ABD5 /* Setupable.swift in Sources */,
 				19C20C1627D78A6F0087ABD5 /* InternetConnectionReachabilityHandler.swift in Sources */,
@@ -1260,7 +1291,6 @@
 				19C20C8927D78A8E0087ABD5 /* String+Highlighted.swift in Sources */,
 				19C20CC227D78A9B0087ABD5 /* NLView.swift in Sources */,
 				19559B3127EA4CC6000F467E /* AlarmVolumeCell.swift in Sources */,
-				19C20BEB27D7899C0087ABD5 /* TableHeaderFooterConfigurator.swift in Sources */,
 				19C20C7D27D78A8E0087ABD5 /* Array+ToString.swift in Sources */,
 				19C20BE627D7899C0087ABD5 /* CellConfigurator.swift in Sources */,
 				19C20C7C27D78A8E0087ABD5 /* Collection+SafeSubscript.swift in Sources */,
@@ -1275,7 +1305,7 @@
 				19C20BEA27D7899C0087ABD5 /* Delegatable.swift in Sources */,
 				1983D7A827D8C923003D56D8 /* ProfileViewController.swift in Sources */,
 				19559AEA27E9E9CA000F467E /* UIView+Gradient.swift in Sources */,
-				19559B3727EA4F51000F467E /* AlarmDetailTableModel.swift in Sources */,
+				19559B3727EA4F51000F467E /* AlarmDetailTableViewItem.swift in Sources */,
 				19C20C8327D78A8E0087ABD5 /* String+Localized.swift in Sources */,
 				19B844B827DB969500203A23 /* Loadable.swift in Sources */,
 				19C20BE727D7899C0087ABD5 /* Configurable.swift in Sources */,
@@ -1285,6 +1315,7 @@
 				19559B3527EA4E88000F467E /* AlarmRepeatDelayCell.swift in Sources */,
 				19C20C8027D78A8E0087ABD5 /* Dictionary+ToString.swift in Sources */,
 				193684B027D64EBC00BC6631 /* UITableVIew+RegisterCell.swift in Sources */,
+				1914FE2D27EC7AD200D698CB /* AlarmDetailRouter.swift in Sources */,
 				19559AE527E9E975000F467E /* AlarmDetailViewController.swift in Sources */,
 				19B844B727DB969500203A23 /* ProgressHUD.swift in Sources */,
 				19C20BE327D7899C0087ABD5 /* CollectionCellConfigurator.swift in Sources */,
@@ -1308,6 +1339,7 @@
 				193684C027D64EEA00BC6631 /* ViewOutput.swift in Sources */,
 				19C20CC327D78A9B0087ABD5 /* NLCollectionViewCell.swift in Sources */,
 				19B8449F27DB4F8E00203A23 /* DatabasePath.swift in Sources */,
+				1914FE3127ECB7A400D698CB /* WeekDaysGetter.swift in Sources */,
 				19C20C8627D78A8E0087ABD5 /* String+Capitalizing.swift in Sources */,
 				19C20C8A27D78A8E0087ABD5 /* String+Dictionary.swift in Sources */,
 				19559AE427E9E975000F467E /* AlarmCell.swift in Sources */,
@@ -1349,8 +1381,8 @@
 				19559B2B27EA2E40000F467E /* TerminateMethod.swift in Sources */,
 				19B844B527DB969500203A23 /* ProgressHUDContainer.swift in Sources */,
 				1983D7A627D8C1E1003D56D8 /* TabBarViewModel.swift in Sources */,
-				19C20BEC27D7899C0087ABD5 /* TableCellConfigurator.swift in Sources */,
 				19C20BE827D7899C0087ABD5 /* CollectionDataConverterInput.swift in Sources */,
+				1914FE2927EC738500D698CB /* TableHeaderFooterConfigurator.swift in Sources */,
 				19C20BE427D7899C0087ABD5 /* CollectionViewManagerInput.swift in Sources */,
 				19C20CBF27D78A9B0087ABD5 /* NLTableViewHeaderFooterView.swift in Sources */,
 				19C20C6F27D78A8E0087ABD5 /* UIImage + Additionals.swift in Sources */,
@@ -1497,7 +1529,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = UHQ7TS5P9H;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Awaker/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1528,7 +1560,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = UHQ7TS5P9H;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Awaker/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

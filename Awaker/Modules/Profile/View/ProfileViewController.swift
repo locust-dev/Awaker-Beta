@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import PureLayout
 import RxSwift
 import RxCocoa
 
@@ -13,9 +14,9 @@ final class ProfileViewController: NLViewController {
     
     // MARK: - Properties
     
-    private let selectedCell = PublishSubject<IndexPath>()
+    var viewModel: ProfileViewModel!
     
-    private let viewModel = ProfileViewModel()
+    private let selectedCell = PublishSubject<IndexPath>()
     private let tableView = CommonTableView()
     private let disposeBag = DisposeBag()
     
@@ -39,6 +40,7 @@ final class ProfileViewController: NLViewController {
         navigationController?.navigationBar.prefersLargeTitles = true
         title = "Profile"
        
+        tableView.refreshControlIsEnabled = true
         tableView.register(ProfileCell.self)
         
         view.addSubview(tableView)

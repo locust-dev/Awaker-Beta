@@ -29,9 +29,14 @@ final class AlarmListRouter {
 extension AlarmListRouter: AlarmListRouterInput {
     
     func openAlarmDetail(name: String) {
+        
         let viewModel = AlarmDetailViewModel()
         let view = AlarmDetailViewController()
+        let router = AlarmDetailRouter(view: view)
+        
         view.viewModel = viewModel
+        viewModel.router = router
+        
         transition.present(viewController: view, animated: true)
     }
     
