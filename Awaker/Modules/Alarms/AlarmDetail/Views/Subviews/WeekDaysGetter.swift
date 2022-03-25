@@ -15,8 +15,9 @@ final class WeekDaysGetter {
         weekDayViews
     }
     
-    let selectedWeekDays: Observable<[WeekDayView]>
+    let selectedWeekDays = PublishSubject<[WeekDay]>()
     
+    private let weekDayDidChange: PublishSubject<WeekDay>
     private let weekDayViews: [WeekDayView]
     private let disposeBag = DisposeBag()
     
@@ -24,9 +25,29 @@ final class WeekDaysGetter {
     // MARK: - Init
     
     init() {
-        let weekDayViews = WeekDay.allCases.map { WeekDayView(weekDay: $0) }
-        self.weekDayViews = weekDayViews
-        self.selectedWeekDays = Observable.just(weekDayViews)
+        
+        let weekDayDidChangeObserver = PublishSubject<WeekDay>()
+        
+        weekDayViews = WeekDay.allCases.map {
+            WeekDayView(weekDay: $0, didChangeObserver: weekDayDidChangeObserver)
+        }
+        
+        self.weekDayDidChange = weekDayDidChangeObserver
+    }
+    
+    
+    // MARK: - Public methods
+    
+    func startSubscribing() {
+        
+        weekDayDidChange
+            .withLatestFrom(selectedWeekDays) { ($0, $1) }
+            .subscribe(onNext: { [weak selectedWeekDays] changedDay, selectedDays in
+                selectedDays.contains(changedDay)
+                    ? selectedWeekDays?.onNext(selectedDays.filter({ $0 != changedDay }))
+                    : selectedWeekDays?.onNext(selectedDays + [changedDay])
+            })
+            .disposed(by: disposeBag)
     }
     
 }

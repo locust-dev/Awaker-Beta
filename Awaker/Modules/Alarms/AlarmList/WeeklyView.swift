@@ -65,7 +65,7 @@ final class WeeklyView: NLView {
          saturdayLabel,
          sundayLabel].forEach {
             $0.textColor = .white
-            $0.font = .systemFont(ofSize: 18, weight: .light)
+            $0.font = MainFont.light.withSize(18)
             $0.textAlignment = .center
         }
     }
@@ -75,19 +75,19 @@ final class WeeklyView: NLView {
             
             switch day {
             case .sunday:
-                sundayLabel.textColor = Colors.neon()
+                sundayLabel.textColor = Colors.lightPurple()
             case .monday:
-                mondayLabel.textColor = Colors.neon()
+                mondayLabel.textColor = Colors.lightPurple()
             case .tuesday:
-                tuesdayLabel.textColor = Colors.neon()
+                tuesdayLabel.textColor = Colors.lightPurple()
             case .wednesday:
-                wensdayLabel.textColor = Colors.neon()
+                wensdayLabel.textColor = Colors.lightPurple()
             case .thursday:
-                thursdayLabel.textColor = Colors.neon()
+                thursdayLabel.textColor = Colors.lightPurple()
             case .friday:
-                fridayLabel.textColor = Colors.neon()
+                fridayLabel.textColor = Colors.lightPurple()
             case .saturday:
-                saturdayLabel.textColor = Colors.neon()
+                saturdayLabel.textColor = Colors.lightPurple()
             }
         }
     }

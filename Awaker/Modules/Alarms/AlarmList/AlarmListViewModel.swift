@@ -47,7 +47,7 @@ final class AlarmListViewModel {
             if let alarm = $0.element {
                 self.alarms.append(alarm)
                 self.alarms = self.alarms.sorted(by: {$0.time < $1.time})
-                self.title.onNext("Звонит через ")
+                self.title.onNext("Звонит через 0 часов 00 минут")
                 self.cells.onNext(self.alarms)
             }
         }.disposed(by: disposeBag)

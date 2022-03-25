@@ -17,12 +17,15 @@ final class AlarmDetailViewModel {
     var router: AlarmDetailRouterInput?
     
     private var alarm: Alarm
-    private let initialAlarmName: String?
     
     private let tableViewItems = PublishSubject<[AlarmDetailTableViewItem]>()
-    private let volumeSliderValue = PublishSubject<Float>()
-    
     private let disposeBag = DisposeBag()
+    
+    
+    // MARK: - Cell binders
+    
+    private let volumeSliderValue = PublishSubject<Float>()
+    private let alarmName: BehaviorSubject<String?>
     
     
     // MARK: - Init
@@ -32,12 +35,12 @@ final class AlarmDetailViewModel {
         guard let alarm = alarm else {
             let emptyAlarm = Alarm()
             self.alarm = emptyAlarm
-            self.initialAlarmName = emptyAlarm.name
+            alarmName = BehaviorSubject(value: emptyAlarm.name)
             return
         }
 
         self.alarm = alarm
-        self.initialAlarmName = alarm.name
+        alarmName = BehaviorSubject(value: alarm.name)
     }
     
     
@@ -67,7 +70,13 @@ final class AlarmDetailViewModel {
         let repeatDelayRowConfigurator = RepeatDelayCellConfigurator(item: repeatDelayRowModel)
         let repeatDelayRowItem = Item.repeatDelay(configurator: repeatDelayRowConfigurator)
         
+        typealias NameCellConfigurator = TableCellConfigurator<AlarmNameCell, AlarmNameCell.Model>
+        let nameRowModel = AlarmNameCell.Model(name: alarmName)
+        let nameRowConfigurator = NameCellConfigurator(item: nameRowModel)
+        let nameRowItem = Item.name(configurator: nameRowConfigurator)
+        
         let items = [
+            nameRowItem,
             volumeRowItem,
             soundRowItem,
             repeatDelayRowItem,
@@ -85,7 +94,6 @@ final class AlarmDetailViewModel {
 extension AlarmDetailViewModel: ViewModelType {
     
     struct Input {
-        let name: Observable<String?>
         let time: Observable<Date>
         let activeDays: Observable<[WeekDay]>
         let terminateMethod: Observable<TerminateMethod?>
@@ -95,22 +103,28 @@ extension AlarmDetailViewModel: ViewModelType {
     }
     
     struct Output {
-        let initialAlarmName: Driver<String?>
+        let alarm: Observable<Alarm>
         let cells: Driver<[AlarmDetailTableViewItem]>
     }
     
     func transform(input: Input) -> Output {
         
+        alarmName
+            .subscribe(onNext: { self.alarm.name = $0 })
+            .disposed(by: disposeBag)
+        
         volumeSliderValue
-            .subscribe(onNext: { self.alarm.volume = $0})
+            .subscribe(onNext: { self.alarm.volume = $0 })
+            .disposed(by: disposeBag)
+        
+        input.activeDays
+            .subscribe(onNext: {
+                print($0)
+                self.alarm.activeDays = $0 })
             .disposed(by: disposeBag)
         
         input.closeButtonTap
             .drive(onNext: { self.router?.dismiss() })
-            .disposed(by: disposeBag)
-        
-        input.name
-            .subscribe(onNext: { self.alarm.name = $0 })
             .disposed(by: disposeBag)
         
         input.time
@@ -136,10 +150,8 @@ extension AlarmDetailViewModel: ViewModelType {
             })
             .disposed(by: disposeBag)
         
-        let cells = tableViewItems.asDriver(onErrorJustReturn: [])
-        let initialAlarmName = Observable.just(initialAlarmName).asDriver(onErrorJustReturn: nil)
-       
-        return Output(initialAlarmName: initialAlarmName, cells: cells)
+        return Output(alarm: Observable.just(alarm),
+                      cells: tableViewItems.asDriver(onErrorJustReturn: []))
     }
     
 }

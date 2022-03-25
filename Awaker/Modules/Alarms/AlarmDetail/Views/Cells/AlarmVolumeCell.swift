@@ -10,7 +10,7 @@ import PureLayout
 import RxSwift
 import RxCocoa
 
-final class AlarmVolumeCell: NLTableViewCell {
+final class AlarmVolumeCell: CellWithSpacing {
     
     // MARK: - Properties
     
@@ -40,13 +40,22 @@ final class AlarmVolumeCell: NLTableViewCell {
     
     private func drawSelf() {
         
+        titleLabel.font = MainFont.regular.withSize(14)
+        titleLabel.textColor = .white
+        
+        contentView.backgroundColor = .white.withAlphaComponent(0.15)
+        contentView.layer.cornerRadius = 8
+        
         contentView.addSubview(titleLabel)
         contentView.addSubview(slider)
         
+        titleLabel.autoPinEdgesToSuperviewEdges(with: UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 0),
+                                                excludingEdge: .right)
         
-        titleLabel.autoPinEdgesToSuperviewEdges(with: .zero, excludingEdge: .right)
-        slider.autoPinEdgesToSuperviewEdges(with: .zero, excludingEdge: .left)
-        titleLabel.autoPinEdge(.right, to: .left, of: slider)
+        slider.autoPinEdgesToSuperviewEdges(with: UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 16),
+                                            excludingEdge: .left)
+        
+        slider.autoPinEdge(.left, to: .right, of: titleLabel, withOffset: 20)
     }
     
 }

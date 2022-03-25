@@ -56,18 +56,19 @@ final class AlarmListViewController: NLViewController {
     
     private func drawSelf() {
         
+        rightBarButtonItem.tintColor = .white
         navigationItem.rightBarButtonItem = rightBarButtonItem
         
-        navigationTitle.font = .systemFont(ofSize: 18, weight: .regular)
+        navigationTitle.font = MainFont.semiBold.withSize(18)
         navigationTitle.textColor = .white
         
         navigationController?.navigationBar.addSubview(navigationTitle)
         
         navigationTitle.autoPinEdgesToSuperviewEdges(with: UIEdgeInsets(top: 0,
-                                                                             left: 20,
-                                                                             bottom: 0,
-                                                                             right: 0),
-                                                          excludingEdge: .right)
+                                                                        left: 20,
+                                                                        bottom: 0,
+                                                                        right: 0),
+                                                     excludingEdge: .right)
         
         view.backgroundColor = Colors.darkPurple()
         

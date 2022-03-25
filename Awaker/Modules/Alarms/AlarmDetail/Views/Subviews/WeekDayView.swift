@@ -7,6 +7,8 @@
 
 import UIKit
 
+import RxSwift
+
 final class WeekDayView: NLView {
     
     // MARK: - Properties
@@ -15,20 +17,24 @@ final class WeekDayView: NLView {
         weekDay
     }
     
-    var isSelected: Bool {
+    var isSelected: Bool = false {
         didSet {
             setSeleted()
+            viewDidChange.onNext(weekDay)
         }
     }
     
+    private let viewDidChange: PublishSubject<WeekDay>
     private let weekDay: WeekDay
     private let shortTitleLabel = UILabel()
     
     
     // MARK: - Init
     
-    init(weekDay: WeekDay) {
-        isSelected = weekDay.isWorkDay
+    init(weekDay: WeekDay,
+         didChangeObserver: PublishSubject<WeekDay>) {
+        
+        viewDidChange = didChangeObserver
         self.weekDay = weekDay
         super.init(frame: .zero)
         shortTitleLabel.text = weekDay.shortDayTitle
@@ -41,11 +47,10 @@ final class WeekDayView: NLView {
     private func drawSelf() {
         
         addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tap)))
-        backgroundColor = isSelected ? .red : .purple
         
-        shortTitleLabel.font = UIFont.systemFont(ofSize: 14)
-        shortTitleLabel.textColor = .white
-        shortTitleLabel.layer.cornerRadius = 12
+        shortTitleLabel.textAlignment = .center
+        shortTitleLabel.font = MainFont.regular.withSize(22)
+        shortTitleLabel.textColor = isSelected ? UIColor(hex: "#9E75EE") : .white
         
         addSubview(shortTitleLabel)
         shortTitleLabel.autoPinEdgesToSuperviewEdges()
@@ -62,6 +67,6 @@ final class WeekDayView: NLView {
     // MARK: - Privat methods
     
     private func setSeleted() {
-        backgroundColor = isSelected ? .red : .purple
+        shortTitleLabel.textColor = isSelected ? UIColor(hex: "#9E75EE") : .white
     }
 }

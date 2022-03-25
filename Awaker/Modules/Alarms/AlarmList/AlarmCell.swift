@@ -13,6 +13,14 @@ import RxCocoa
 
 final class AlarmCell: NLTableViewCell {
     
+    // MARK: - Locals
+    
+    private enum Locas {
+        
+        static let leftGradientColor = UIColor(hex: "#2E105C")
+        static let rightGradientColor = UIColor(hex: "#090115")
+    }
+    
     // MARK: - Properties
     
     let containerView = UIView()
@@ -55,6 +63,13 @@ final class AlarmCell: NLTableViewCell {
         disposeBag = nil
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        containerView.setGradientBackground(with: [Locas.leftGradientColor, Locas.rightGradientColor],
+                                            endPoint: CGPoint(x: 1, y: 0))
+        
+    }
+    
     
     // MARK: - Drawing
     
@@ -63,7 +78,8 @@ final class AlarmCell: NLTableViewCell {
         backgroundColor = .clear
         selectionStyle = .none
         
-        containerView.backgroundColor = Colors.lightPurple()
+        
+        
         containerView.layer.cornerRadius = 12
         containerView.clipsToBounds = true
         containerView.alpha = 0.7
@@ -71,11 +87,11 @@ final class AlarmCell: NLTableViewCell {
         
         nameLabel.textColor = .white
         nameLabel.numberOfLines = 2
-        nameLabel.font = .systemFont(ofSize: 16, weight: .regular)
+        nameLabel.font =  MainFont.regular.withSize(16)
         containerView.addSubview(nameLabel)
         
         timeLabel.textColor = .white
-        timeLabel.font = .systemFont(ofSize: 26, weight: .bold)
+        timeLabel.font =  MainFont.bold.withSize(26)
         containerView.addSubview(timeLabel)
         
         containerView.addSubview(weeklyView)

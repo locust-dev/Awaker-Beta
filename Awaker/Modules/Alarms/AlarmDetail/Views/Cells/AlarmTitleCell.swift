@@ -11,7 +11,7 @@ import PureLayout
 import RxSwift
 import RxCocoa
 
-final class AlarmTitleCell: NLTableViewCell {
+final class AlarmTitleCell: CellWithSpacing {
     
     // MARK: - Properties
     
@@ -39,10 +39,15 @@ final class AlarmTitleCell: NLTableViewCell {
     // MARK: - Drawing
     
     private func drawSelf() {
+        
+        titleLabel.font = MainFont.regular.withSize(14)
+        titleLabel.textColor = .white
     
+        contentView.backgroundColor = .white.withAlphaComponent(0.15)
+        contentView.layer.cornerRadius = 8
         contentView.addSubview(titleLabel)
         
-        titleLabel.autoPinEdgesToSuperviewEdges()
+        titleLabel.autoPinEdgesToSuperviewEdges(with: UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16))
     }
     
 }

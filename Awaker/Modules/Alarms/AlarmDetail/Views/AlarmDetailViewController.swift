@@ -12,15 +12,21 @@ import RxCocoa
 
 final class AlarmDetailViewController: NLViewController {
     
+    private enum Locals {
+        
+        static let mainBackground = "#1A0837"
+    }
+    
+    
     // MARK: - Properties
     
     var viewModel: AlarmDetailViewModel!
     
     private let weekDayGetter =  WeekDaysGetter()
-    private let alarmNameTextView = UITextView()
+    private let untilWakeUpLabel = UILabel()
     private let closeButton = UIButton()
     private let saveButton = UIButton()
-    private let pickerView = UIDatePicker()
+    private let pickerView = AlarmTimePicker()
     private let tableView = CommonTableView()
     private let disposeBag = DisposeBag()
     
@@ -39,42 +45,43 @@ final class AlarmDetailViewController: NLViewController {
     // MARK: - Drawing
     
     private func drawSelf() {
-    
+        
+        weekDayGetter.startSubscribing()
+        
+        tableView.allowsSelection = false
+        tableView.separatorStyle = .none
+        tableView.backgroundColor = .clear
+        tableView.rowHeight = 52
         tableView.isScrollEnabled = false
         tableView.register([
+            AlarmNameCell.self,
             AlarmTitleCell.self,
             AlarmVolumeCell.self,
             AlarmRepeatDelayCell.self
         ])
         
-        view.setGradientBackground(
-            with: [Colors.lightPurple(), Colors.darkPurple()],
-            startPoint: CGPoint(x: 0, y: 0),
-            endPoint: CGPoint(x: 1, y: 0)
-        )
+        view.backgroundColor = UIColor(hex: Locals.mainBackground)
         
         let daysStack = UIStackView(arrangedSubviews: weekDayGetter.allWeekDayViews)
         daysStack.spacing = 12
         daysStack.distribution = .fillEqually
         
-        pickerView.datePickerMode = .time
-        pickerView.locale = Locale(identifier: "en_GB")
-        pickerView.preferredDatePickerStyle = .wheels
+        untilWakeUpLabel.textAlignment = .center
+        untilWakeUpLabel.text = "Время сна ~ 7 ч 15 мин"
+        untilWakeUpLabel.textColor = .white
+        untilWakeUpLabel.font = MainFont.regular.withSize(24)
         
-        alarmNameTextView.isScrollEnabled = false
-        alarmNameTextView.backgroundColor = .clear
-        alarmNameTextView.textColor = .white
-        alarmNameTextView.font = UIFont.systemFont(ofSize: 18)
-        
+        closeButton.setImage(Images.closeButtonIcon(), for: .normal)
+        closeButton.layer.cornerRadius = 8
+        closeButton.backgroundColor = .white.withAlphaComponent(0.15)
         closeButton.setTitleColor(.black, for: .normal)
-        closeButton.setTitle("Х", for: .normal)
-        closeButton.backgroundColor = .yellow
         
+        saveButton.setImage(Images.checkMarkIcon(), for: .normal)
+        saveButton.layer.cornerRadius = 8
+        saveButton.backgroundColor = .white.withAlphaComponent(0.15)
         saveButton.setTitleColor(.black, for: .normal)
-        saveButton.setTitle("Save", for: .normal)
-        saveButton.backgroundColor = .white
         
-        view.addSubview(alarmNameTextView)
+        view.addSubview(untilWakeUpLabel)
         view.addSubview(closeButton)
         view.addSubview(saveButton)
         view.addSubview(pickerView)
@@ -83,31 +90,28 @@ final class AlarmDetailViewController: NLViewController {
         
         closeButton.autoPinEdge(toSuperviewEdge: .top, withInset: 20)
         closeButton.autoPinEdge(toSuperviewEdge: .left, withInset: 20)
-        closeButton.autoSetDimensions(to: CGSize(width: 22, height: 22))
+        closeButton.autoSetDimensions(to: CGSize(width: 44, height: 44))
         
         saveButton.autoPinEdge(toSuperviewEdge: .top, withInset: 20)
         saveButton.autoPinEdge(toSuperviewEdge: .right, withInset: 20)
-        saveButton.autoSetDimensions(to: CGSize(width: 100, height: 22))
+        saveButton.autoSetDimensions(to: CGSize(width: 44, height: 44))
         
-        alarmNameTextView.autoPinEdge(.top, to: .bottom, of: closeButton, withOffset: 30)
-        alarmNameTextView.autoPinEdge(toSuperviewEdge: .left, withInset: 20)
-        alarmNameTextView.autoPinEdge(toSuperviewEdge: .right, withInset: 20)
+        untilWakeUpLabel.autoPinEdge(.top, to: .bottom, of: closeButton, withOffset: 30)
+        untilWakeUpLabel.autoPinEdge(toSuperviewEdge: .left, withInset: 20)
+        untilWakeUpLabel.autoPinEdge(toSuperviewEdge: .right, withInset: 20)
         
-        pickerView.autoPinEdge(.top, to: .bottom, of: alarmNameTextView, withOffset: 30)
-        pickerView.autoPinEdge(toSuperviewEdge: .left, withInset: 20)
-        pickerView.autoPinEdge(toSuperviewEdge: .right, withInset: 20)
-        pickerView.autoSetDimension(.height, toSize: 150)
+        pickerView.autoPinEdge(.top, to: .bottom, of: untilWakeUpLabel, withOffset: 30)
+        pickerView.autoPinEdge(toSuperviewEdge: .left, withInset: 30)
+        pickerView.autoPinEdge(toSuperviewEdge: .right, withInset: 30)
         
         daysStack.autoPinEdge(.top, to: .bottom, of: pickerView, withOffset: 20)
-        daysStack.autoPinEdge(toSuperviewEdge: .right, withInset: 20)
-        daysStack.autoPinEdge(toSuperviewEdge: .left, withInset: 20)
+        daysStack.autoPinEdge(toSuperviewEdge: .right, withInset: 30)
+        daysStack.autoPinEdge(toSuperviewEdge: .left, withInset: 30)
         
-        tableView.autoPinEdge(.top, to: .bottom, of: daysStack)
+        tableView.autoPinEdge(.top, to: .bottom, of: daysStack, withOffset: 20)
         tableView.autoPinEdge(toSuperviewEdge: .left, withInset: 20)
         tableView.autoPinEdge(toSuperviewEdge: .right, withInset: 20)
-        
-        // TODO: - Разобраться
-        tableView.autoSetDimension(.height, toSize: 200)
+        tableView.autoPinEdge(toSuperviewEdge: .bottom, withInset: 20)
     }
     
     
@@ -115,14 +119,10 @@ final class AlarmDetailViewController: NLViewController {
     
     private func bind() {
         
-        
         let input = AlarmDetailViewModel.Input(
-            name: alarmNameTextView.rx.text.asObservable(),
-            time: pickerView.rx.value.asObservable(),
-            
-            // MARK: - Как отправить ебаный эвент из вьюхи???
-            activeDays: Observable.just([]),
-            terminateMethod: Observable.just(nil),
+            time: pickerView.selectedTime.asObservable(),
+            activeDays: weekDayGetter.selectedWeekDays.asObservable(),
+            terminateMethod: Observable.just(nil),   // TODO: - Доделать и додумать
             sound: Observable.just("новый звук"),
             closeButtonTap: closeButton.rx.tap.asDriver(),
             saveButtonTap: saveButton.rx.tap.asDriver()
@@ -130,10 +130,13 @@ final class AlarmDetailViewController: NLViewController {
         
         let output = viewModel.transform(input: input)
         
-        output.initialAlarmName
-            .drive(onNext: { self.alarmNameTextView.rx.text.onNext($0) })
+        output.alarm
+            .subscribe(onNext: {
+                self.pickerView.selectedTime.onNext($0.time)
+                self.weekDayGetter.selectedWeekDays.onNext($0.activeDays)
+            })
             .disposed(by: disposeBag)
-    
+        
         output.cells
             .drive(tableView.rx.items) { cell, index, model in
                 let indexPath = IndexPath(row: index, section: 0)

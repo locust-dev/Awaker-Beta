@@ -30,13 +30,14 @@ struct Alarm {
 // MARK: - Default alarm init
 extension Alarm {
     
+    /// Здесь данные для создания любого нового будильник по умолчанию
     init() {
         name = "Новый будильник"
-        time = Date(timeIntervalSince1970: TimeInterval(124135))
-        activeDays = []
+        time = Date(timeIntervalSince1970: 1648302920)
+        activeDays = [.monday, .tuesday]
         terminateMethod = nil
-        volume = 0.5
+        volume = 0.2
         sound = "Какой то звук"
-        repeatDelay = 5
+        repeatDelay = 10
     }
 }
