@@ -8,7 +8,7 @@
 import UIKit
 import PureLayout
 
-final class AlarmRepeatDelayCell: NLTableViewCell {
+final class AlarmRepeatDelayCell: CellWithSpacing {
     
     // MARK: - Properties
     
@@ -26,10 +26,15 @@ final class AlarmRepeatDelayCell: NLTableViewCell {
     // MARK: - Drawing
     
     private func drawSelf() {
+        
+        titleLabel.font = MainFont.regular.withSize(14)
+        titleLabel.textColor = .white
     
+        contentView.backgroundColor = .white.withAlphaComponent(0.15)
+        contentView.layer.cornerRadius = 8
         contentView.addSubview(titleLabel)
         
-        
+        titleLabel.autoPinEdgesToSuperviewEdges(with: UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16))
     }
     
 }

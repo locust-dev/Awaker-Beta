@@ -90,7 +90,7 @@ extension AlarmTimePicker: UIPickerViewDataSource, UIPickerViewDelegate {
                                                        matching: dateComponents,
                                                        matchingPolicy: .nextTime)
         else {
-            return 
+            return
         }
        
         selectedTime.onNext(nextDate)
@@ -124,7 +124,7 @@ extension AlarmTimePicker: UIPickerViewDataSource, UIPickerViewDelegate {
         
         let label = UILabel()
         label.textColor = .white
-        label.font = UIFont.boldSystemFont(ofSize: 64)
+        label.font = MainFont.regular.withSize(64)
         
         switch component {
         

@@ -11,11 +11,11 @@ import PureLayout
 import RxSwift
 import RxCocoa
 
-final class AlarmNameCell: NLTableViewCell {
+final class AlarmNameCell: CellWithSpacing {
     
     // MARK: - Properties
     
-    private let textView = UITextView()
+    private let textField = UITextField()
     private var disposeBag: DisposeBag?
     
     
@@ -40,13 +40,15 @@ final class AlarmNameCell: NLTableViewCell {
     
     private func drawSelf() {
         
-        textView.isScrollEnabled = false
-        textView.backgroundColor = .clear
-        textView.textColor = .black
-        textView.font = UIFont.systemFont(ofSize: 18)
+        textField.backgroundColor = .clear
+        textField.textColor = .white
+        textField.font = MainFont.regular.withSize(14)
     
-        contentView.addSubview(textView)
-        textView.autoPinEdgesToSuperviewEdges(with: UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8))
+        contentView.backgroundColor = .white.withAlphaComponent(0.15)
+        contentView.layer.cornerRadius = 8
+        contentView.addSubview(textField)
+        
+        textField.autoPinEdgesToSuperviewEdges(with: UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16))
     }
 }
 
@@ -62,10 +64,10 @@ extension AlarmNameCell: Configurable {
         let disposeBag = DisposeBag()
         
         model.name
-            .subscribe(onNext: { self.textView.text = $0 })
+            .subscribe(onNext: { self.textField.text = $0 })
             .disposed(by: disposeBag)
         
-        textView.rx.text
+        textField.rx.text
             .bind(to: model.name)
             .disposed(by: disposeBag)
         

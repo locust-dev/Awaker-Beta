@@ -154,6 +154,13 @@
 		19CBD91527EDD178008A4D69 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19CBD91427EDD178008A4D69 /* Colors.xcassets */; };
 		19CBD91727EDD26F008A4D69 /* AlarmNameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CBD91627EDD26F008A4D69 /* AlarmNameCell.swift */; };
 		19CBD91927EDD66B008A4D69 /* AlarmTimePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CBD91827EDD66B008A4D69 /* AlarmTimePicker.swift */; };
+		19CBD91C27EE1C87008A4D69 /* CellWithSpacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CBD91B27EE1C87008A4D69 /* CellWithSpacing.swift */; };
+		19CBD92327EE2012008A4D69 /* Comfortaa-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 19CBD91E27EE2012008A4D69 /* Comfortaa-Light.ttf */; };
+		19CBD92427EE2012008A4D69 /* Comfortaa-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 19CBD91F27EE2012008A4D69 /* Comfortaa-Regular.ttf */; };
+		19CBD92527EE2012008A4D69 /* Comfortaa-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 19CBD92027EE2012008A4D69 /* Comfortaa-Bold.ttf */; };
+		19CBD92627EE2012008A4D69 /* Comfortaa-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 19CBD92127EE2012008A4D69 /* Comfortaa-Medium.ttf */; };
+		19CBD92727EE2012008A4D69 /* Comfortaa-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 19CBD92227EE2012008A4D69 /* Comfortaa-SemiBold.ttf */; };
+		19CBD92927EE20B2008A4D69 /* MainFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CBD92827EE20B2008A4D69 /* MainFont.swift */; };
 		669A4F81CE0A0D48A5F1FF04 /* Pods_Awaker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A2F9B67D5129FDC4A9B6D6F /* Pods_Awaker.framework */; };
 		DF02E82E27EA2273001F99BD /* AlarmListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF02E82D27EA2273001F99BD /* AlarmListRouter.swift */; };
 		DFBCAC3327D380F300A58DDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBCAC3227D380F300A58DDF /* AppDelegate.swift */; };
@@ -281,6 +288,13 @@
 		19CBD91427EDD178008A4D69 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		19CBD91627EDD26F008A4D69 /* AlarmNameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmNameCell.swift; sourceTree = "<group>"; };
 		19CBD91827EDD66B008A4D69 /* AlarmTimePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmTimePicker.swift; sourceTree = "<group>"; };
+		19CBD91B27EE1C87008A4D69 /* CellWithSpacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellWithSpacing.swift; sourceTree = "<group>"; };
+		19CBD91E27EE2012008A4D69 /* Comfortaa-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa-Light.ttf"; sourceTree = "<group>"; };
+		19CBD91F27EE2012008A4D69 /* Comfortaa-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa-Regular.ttf"; sourceTree = "<group>"; };
+		19CBD92027EE2012008A4D69 /* Comfortaa-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa-Bold.ttf"; sourceTree = "<group>"; };
+		19CBD92127EE2012008A4D69 /* Comfortaa-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa-Medium.ttf"; sourceTree = "<group>"; };
+		19CBD92227EE2012008A4D69 /* Comfortaa-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa-SemiBold.ttf"; sourceTree = "<group>"; };
+		19CBD92827EE20B2008A4D69 /* MainFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFont.swift; sourceTree = "<group>"; };
 		4D1879FD57F00FF4B6B22836 /* Pods_Awaker_debug.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Awaker_debug.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		62142B4683D5629263BA366D /* Pods-Awaker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Awaker.debug.xcconfig"; path = "Target Support Files/Pods-Awaker/Pods-Awaker.debug.xcconfig"; sourceTree = "<group>"; };
 		7A2F9B67D5129FDC4A9B6D6F /* Pods_Awaker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Awaker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -409,6 +423,7 @@
 		193684A627D64E5A00BC6631 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				19CBD92827EE20B2008A4D69 /* MainFont.swift */,
 				19559AE927E9E9CA000F467E /* UIView+Gradient.swift */,
 				19559AE727E9E988000F467E /* UIConstants.swift */,
 				19C95A5527E3321900A31746 /* VIewModelType.swift */,
@@ -441,6 +456,7 @@
 				19B844B927DB96AB00203A23 /* RefreshControl.swift */,
 				193684B727D64ED900BC6631 /* KeyboardShowableViewController.swift */,
 				19B844AE27DB95CB00203A23 /* CommonTableView.swift */,
+				19CBD91B27EE1C87008A4D69 /* CellWithSpacing.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1060,6 +1076,18 @@
 			path = Placeholder;
 			sourceTree = "<group>";
 		};
+		19CBD91D27EE2006008A4D69 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				19CBD92027EE2012008A4D69 /* Comfortaa-Bold.ttf */,
+				19CBD91E27EE2012008A4D69 /* Comfortaa-Light.ttf */,
+				19CBD92127EE2012008A4D69 /* Comfortaa-Medium.ttf */,
+				19CBD91F27EE2012008A4D69 /* Comfortaa-Regular.ttf */,
+				19CBD92227EE2012008A4D69 /* Comfortaa-SemiBold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		2290712064A9DDE700C957AC /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1105,6 +1133,7 @@
 				19B844A127DB4FD900203A23 /* Core */,
 				193684A627D64E5A00BC6631 /* Common */,
 				1983D7A227D8C19D003D56D8 /* Modules */,
+				19CBD91D27EE2006008A4D69 /* Fonts */,
 				DFBCAC3D27D380F400A58DDF /* LaunchScreen.storyboard */,
 				19C20A3E27D775350087ABD5 /* R.generated.swift */,
 				DFBCAC3B27D380F400A58DDF /* AppIcon.xcassets */,
@@ -1210,13 +1239,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19CBD92327EE2012008A4D69 /* Comfortaa-Light.ttf in Resources */,
 				19C20CBA27D78A9B0087ABD5 /* NiblessClasses.md in Resources */,
+				19CBD92727EE2012008A4D69 /* Comfortaa-SemiBold.ttf in Resources */,
+				19CBD92527EE2012008A4D69 /* Comfortaa-Bold.ttf in Resources */,
 				DFBCAC3F27D380F400A58DDF /* LaunchScreen.storyboard in Resources */,
 				19B8446727DB4DC300203A23 /* GoogleService-Info.plist in Resources */,
 				19CBD91327EDCFFF008A4D69 /* Images.xcassets in Resources */,
 				DFBCAC3C27D380F400A58DDF /* AppIcon.xcassets in Resources */,
 				19C20CC727D78A9B0087ABD5 /* PlaceholderAssets.xcassets in Resources */,
+				19CBD92427EE2012008A4D69 /* Comfortaa-Regular.ttf in Resources */,
 				19CBD91527EDD178008A4D69 /* Colors.xcassets in Resources */,
+				19CBD92627EE2012008A4D69 /* Comfortaa-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1314,6 +1348,7 @@
 				194E876C27DA391800EE8062 /* ModuleType.swift in Sources */,
 				19B844A827DB53C100203A23 /* ProfileModel.swift in Sources */,
 				19C20C8427D78A8E0087ABD5 /* String+Mask.swift in Sources */,
+				19CBD91C27EE1C87008A4D69 /* CellWithSpacing.swift in Sources */,
 				1936838727D64D9100BC6631 /* TransitionModel.swift in Sources */,
 				19B844BA27DB96AB00203A23 /* RefreshControl.swift in Sources */,
 				19C20BEA27D7899C0087ABD5 /* Delegatable.swift in Sources */,
@@ -1356,6 +1391,7 @@
 				1914FE3127ECB7A400D698CB /* WeekDaysGetter.swift in Sources */,
 				19C20C8627D78A8E0087ABD5 /* String+Capitalizing.swift in Sources */,
 				19C20C8A27D78A8E0087ABD5 /* String+Dictionary.swift in Sources */,
+				19CBD92927EE20B2008A4D69 /* MainFont.swift in Sources */,
 				19559AE427E9E975000F467E /* AlarmCell.swift in Sources */,
 				19B8449E27DB4F8E00203A23 /* DatabaseService.swift in Sources */,
 				193684C527D64F3700BC6631 /* ErrorPresentable.swift in Sources */,

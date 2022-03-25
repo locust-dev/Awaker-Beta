@@ -47,11 +47,10 @@ final class WeekDayView: NLView {
     private func drawSelf() {
         
         addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tap)))
-        backgroundColor = isSelected ? .red : .purple
         
-        shortTitleLabel.font = UIFont.systemFont(ofSize: 14)
-        shortTitleLabel.textColor = .white
-        shortTitleLabel.layer.cornerRadius = 12
+        shortTitleLabel.textAlignment = .center
+        shortTitleLabel.font = MainFont.regular.withSize(22)
+        shortTitleLabel.textColor = isSelected ? UIColor(hex: "#9E75EE") : .white
         
         addSubview(shortTitleLabel)
         shortTitleLabel.autoPinEdgesToSuperviewEdges()
@@ -68,6 +67,6 @@ final class WeekDayView: NLView {
     // MARK: - Privat methods
     
     private func setSeleted() {
-        backgroundColor = isSelected ? .red : .purple
+        shortTitleLabel.textColor = isSelected ? UIColor(hex: "#9E75EE") : .white
     }
 }

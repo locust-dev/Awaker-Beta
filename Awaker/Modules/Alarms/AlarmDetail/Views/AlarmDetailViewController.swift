@@ -48,6 +48,10 @@ final class AlarmDetailViewController: NLViewController {
         
         weekDayGetter.startSubscribing()
         
+        tableView.allowsSelection = false
+        tableView.separatorStyle = .none
+        tableView.backgroundColor = .clear
+        tableView.rowHeight = 52
         tableView.isScrollEnabled = false
         tableView.register([
             AlarmNameCell.self,
@@ -65,7 +69,7 @@ final class AlarmDetailViewController: NLViewController {
         untilWakeUpLabel.textAlignment = .center
         untilWakeUpLabel.text = "Время сна ~ 7 ч 15 мин"
         untilWakeUpLabel.textColor = .white
-        untilWakeUpLabel.font = UIFont.systemFont(ofSize: 24)
+        untilWakeUpLabel.font = MainFont.regular.withSize(24)
         
         closeButton.setImage(Images.closeButtonIcon(), for: .normal)
         closeButton.layer.cornerRadius = 8
@@ -101,15 +105,13 @@ final class AlarmDetailViewController: NLViewController {
         pickerView.autoPinEdge(toSuperviewEdge: .right, withInset: 30)
         
         daysStack.autoPinEdge(.top, to: .bottom, of: pickerView, withOffset: 20)
-        daysStack.autoPinEdge(toSuperviewEdge: .right, withInset: 20)
-        daysStack.autoPinEdge(toSuperviewEdge: .left, withInset: 20)
+        daysStack.autoPinEdge(toSuperviewEdge: .right, withInset: 30)
+        daysStack.autoPinEdge(toSuperviewEdge: .left, withInset: 30)
         
-        tableView.autoPinEdge(.top, to: .bottom, of: daysStack)
+        tableView.autoPinEdge(.top, to: .bottom, of: daysStack, withOffset: 20)
         tableView.autoPinEdge(toSuperviewEdge: .left, withInset: 20)
         tableView.autoPinEdge(toSuperviewEdge: .right, withInset: 20)
-        
-        // TODO: - Разобраться
-        tableView.autoSetDimension(.height, toSize: 200)
+        tableView.autoPinEdge(toSuperviewEdge: .bottom, withInset: 20)
     }
     
     
