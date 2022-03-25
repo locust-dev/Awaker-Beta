@@ -21,17 +21,21 @@ final class AlarmListViewController: NLViewController {
     
     private let tableView = UITableView()
     
+    private let rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add,
+                                                     target: self,
+                                                     action: nil)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         drawSelf()
         bind()
-        viewModel?.fetchCellNames()
     }
     
     private func bind() {
         
-        let input = AlarmListViewModel.Input(selectedCellIndex: tableView.rx.itemSelected.asDriver())
+        let input = AlarmListViewModel.Input(selectedCellIndex: tableView.rx.itemSelected.asDriver(),
+                                             addButtonTap: rightBarButtonItem.rx.tap.asDriver())
         
         let output = viewModel?.transform(input: input)
         
@@ -45,7 +49,7 @@ final class AlarmListViewController: NLViewController {
     
     private func drawSelf() {
         
-        navigationController?.navigationBar.isHidden = true
+        navigationItem.rightBarButtonItem = rightBarButtonItem
         
         view.backgroundColor = Colors.darkPurple()
         

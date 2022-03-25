@@ -15,11 +15,13 @@ final class AlarmListViewModel {
 
     var router: AlarmListRouterInput?
     
+    let newAlarm = PublishSubject<Alarm>()
+    
+    var alarms: [Alarm] = []
+    
     let cells = PublishSubject<[Alarm]>()
     
     let disposeBag = DisposeBag()
-    
-    private let names = ["рукоблуд", "ссанина", "очко", "блядун", "вагина"]
     
     
     // MARK: - Public methods
@@ -27,23 +29,27 @@ final class AlarmListViewModel {
     func transform(input: Input) -> Output {
         input.selectedCellIndex
             .drive(onNext: { indexPath in
-                self.router?.openAlarmDetail(name: self.names[safe: indexPath.row] ?? "")
+                if let alarm = self.alarms[safe: indexPath.row] {
+                    self.router?.openAlarmDetail(with: alarm)
+                }
             })
             .disposed(by: disposeBag)
-        return Output(cellModels: cells.asDriver(onErrorJustReturn: []))
-    }
-    
-    func fetchCellNames() {
-        let alarmModels = names.map { Alarm(name: $0,
-                                            time: Date(),
-                                            activeDays: [],
-                                            terminateMethod: nil,
-                                            volume: 0,
-                                            sound: "",
-                                            repeatDelay: 0)
-        }
         
-        cells.onNext(alarmModels)
+        input.addButtonTap
+            .drive(onNext: { [router] in
+                router?.openAlarmDetail(newAlarm: self.newAlarm)
+            })
+            .disposed(by: disposeBag)
+        
+        newAlarm.subscribe {
+            if let alarm = $0.element {
+                self.alarms.append(alarm)
+                self.alarms = self.alarms.sorted(by: {$0.time < $1.time})
+                self.cells.onNext(self.alarms)
+            }
+        }.disposed(by: disposeBag)
+        
+        return Output(cellModels: cells.asDriver(onErrorJustReturn: []))
     }
     
 }
@@ -52,6 +58,7 @@ extension AlarmListViewModel {
     
     struct Input {
         let selectedCellIndex: Driver<IndexPath>
+        let addButtonTap: Driver<Void>
     }
     
     struct Output {

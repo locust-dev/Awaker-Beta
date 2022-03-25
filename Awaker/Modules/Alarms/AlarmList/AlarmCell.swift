@@ -23,19 +23,19 @@ final class AlarmCell: NLTableViewCell {
     let weeklyView = WeeklyView()
     let iconImageView = UIImageView()
     
-//    private var isActive: Bool = false {
-//        didSet {
-//            if isActive {
-//                containerView.alpha = 1
-//                switcher.tintColor = Colors.neon()
-//                switcher.turnOnBacklight(Colors.neon())
-//            } else {
-//                containerView.alpha = 0.7
-//                switcher.tintColor = .white
-//                switcher.turnOffBacklight()
-//            }
-//        }
-//    }
+    private var isActive: Bool = false {
+        didSet {
+            if isActive {
+                containerView.alpha = 1
+                switcher.tintColor = Colors.neon()
+                switcher.turnOnBacklight(Colors.neon())
+            } else {
+                containerView.alpha = 0.7
+                switcher.tintColor = .white
+                switcher.turnOffBacklight()
+            }
+        }
+    }
     
     private var disposeBag: DisposeBag?
     
@@ -91,7 +91,7 @@ final class AlarmCell: NLTableViewCell {
         switcher.autoPinEdge(.right, to: .left, of: iconImageView, withOffset: -20)
         switcher.autoSetDimensions(to: CGSize(width: 42, height: 42))
         switcher.autoAlignAxis(toSuperviewAxis: .horizontal)
-//        switcher.addTarget(self, action: #selector(didTapSwitcher), for: .touchUpInside)
+        switcher.addTarget(self, action: #selector(didTapSwitcher), for: .touchUpInside)
         
         containerView.autoPinEdgesToSuperviewEdges(with: UIEdgeInsets(top: 8,
                                                                       left: 16,
@@ -116,12 +116,12 @@ final class AlarmCell: NLTableViewCell {
         iconImageView.autoPinEdge(toSuperviewEdge: .bottom, withInset: 8)
     }
     
-//    @objc private func didTapSwitcher() {
-//        isActive = !isActive
-//    }
-    
-    func bind(to viewModel: AlarmListViewModel?) {
-        
+    @objc private func didTapSwitcher() {
+        isActive = !isActive
     }
+    
+//    func bind(to viewModel: AlarmListViewModel?) {
+//        
+//    }
     
 }

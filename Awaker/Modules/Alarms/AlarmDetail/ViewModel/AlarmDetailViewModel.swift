@@ -14,6 +14,8 @@ final class AlarmDetailViewModel {
     
     var router: AlarmDetailRouterInput?
     
+    var newAlarm: PublishSubject<Alarm>?
+    
     private var alarm: Alarm
     private let initialAlarmName: String?
     
@@ -129,7 +131,8 @@ extension AlarmDetailViewModel: ViewModelType {
         
         input.saveButtonTap
             .drive(onNext: { [router] in
-                router?.applyAlarmChanges(self.alarm)
+                self.newAlarm?.onNext(self.alarm)
+                router?.dismiss()
             })
             .disposed(by: disposeBag)
         

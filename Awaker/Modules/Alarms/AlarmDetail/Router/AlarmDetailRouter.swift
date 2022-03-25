@@ -36,5 +36,6 @@ extension AlarmDetailRouter: AlarmDetailRouterInput {
     func applyAlarmChanges(_ alarm: Alarm) {
         
         print(alarm)
+        dismiss()
     }
 }
