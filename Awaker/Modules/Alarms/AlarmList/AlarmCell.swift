@@ -23,6 +23,8 @@ final class AlarmCell: NLTableViewCell {
     let weeklyView = WeeklyView()
     let iconImageView = UIImageView()
     
+    private var disposeBag: DisposeBag?
+    
     private var isActive: Bool = false {
         didSet {
             if isActive {
@@ -36,8 +38,6 @@ final class AlarmCell: NLTableViewCell {
             }
         }
     }
-    
-    private var disposeBag: DisposeBag?
     
     
     // MARK: - Init

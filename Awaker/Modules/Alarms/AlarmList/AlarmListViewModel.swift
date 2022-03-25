@@ -21,6 +21,8 @@ final class AlarmListViewModel {
     
     let cells = PublishSubject<[Alarm]>()
     
+    let title = PublishSubject<String>()
+    
     let disposeBag = DisposeBag()
     
     
@@ -45,12 +47,16 @@ final class AlarmListViewModel {
             if let alarm = $0.element {
                 self.alarms.append(alarm)
                 self.alarms = self.alarms.sorted(by: {$0.time < $1.time})
+                self.title.onNext("Звонит через ")
                 self.cells.onNext(self.alarms)
             }
         }.disposed(by: disposeBag)
         
-        return Output(cellModels: cells.asDriver(onErrorJustReturn: []))
+        return Output(cellModels: cells.asDriver(onErrorJustReturn: []),
+                      title: title.asDriver(onErrorJustReturn: ""))
     }
+    
+    
     
 }
 
@@ -63,6 +69,7 @@ extension AlarmListViewModel {
     
     struct Output {
         let cellModels: Driver<[Alarm]>
+        let title: Driver<String>
     }
     
 }

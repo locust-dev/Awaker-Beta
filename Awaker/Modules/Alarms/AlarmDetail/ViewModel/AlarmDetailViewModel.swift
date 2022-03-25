@@ -12,9 +12,9 @@ final class AlarmDetailViewModel {
     
     // MARK: - Properties
     
-    var router: AlarmDetailRouterInput?
+    weak var newAlarm: PublishSubject<Alarm>?
     
-    var newAlarm: PublishSubject<Alarm>?
+    var router: AlarmDetailRouterInput?
     
     private var alarm: Alarm
     private let initialAlarmName: String?

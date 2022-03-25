@@ -70,4 +70,26 @@ final class WeeklyView: NLView {
         }
     }
     
+    func setActiveDays(_ days: [WeekDay]) {
+        for day in days {
+            
+            switch day {
+            case .sunday:
+                sundayLabel.textColor = Colors.neon()
+            case .monday:
+                mondayLabel.textColor = Colors.neon()
+            case .tuesday:
+                tuesdayLabel.textColor = Colors.neon()
+            case .wednesday:
+                wensdayLabel.textColor = Colors.neon()
+            case .thursday:
+                thursdayLabel.textColor = Colors.neon()
+            case .friday:
+                fridayLabel.textColor = Colors.neon()
+            case .saturday:
+                saturdayLabel.textColor = Colors.neon()
+            }
+        }
+    }
+    
 }

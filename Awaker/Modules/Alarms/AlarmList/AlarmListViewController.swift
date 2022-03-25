@@ -25,6 +25,8 @@ final class AlarmListViewController: NLViewController {
                                                      target: self,
                                                      action: nil)
     
+    private let navigationTitle = UILabel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -43,13 +45,29 @@ final class AlarmListViewController: NLViewController {
                                                     cellType: AlarmCell.self)) { _, model, cell in
             cell.nameLabel.text = model.name
             cell.timeLabel.text = model.time.dateStringWithFormat(.minHours)
+            cell.weeklyView.setActiveDays(model.activeDays)
             
         }.disposed(by: disposeBag)
+        
+        output?.title
+            .drive(navigationTitle.rx.text)
+            .disposed(by: disposeBag)
     }
     
     private func drawSelf() {
         
         navigationItem.rightBarButtonItem = rightBarButtonItem
+        
+        navigationTitle.font = .systemFont(ofSize: 18, weight: .regular)
+        navigationTitle.textColor = .white
+        
+        navigationController?.navigationBar.addSubview(navigationTitle)
+        
+        navigationTitle.autoPinEdgesToSuperviewEdges(with: UIEdgeInsets(top: 0,
+                                                                             left: 20,
+                                                                             bottom: 0,
+                                                                             right: 0),
+                                                          excludingEdge: .right)
         
         view.backgroundColor = Colors.darkPurple()
         
