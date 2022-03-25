@@ -12,6 +12,8 @@ final class AlarmDetailViewModel {
     
     // MARK: - Properties
     
+    let dropAlarm = PublishSubject<Alarm>()
+    
     var router: AlarmDetailRouterInput?
     
     private var alarm: Alarm
@@ -100,7 +102,11 @@ extension AlarmDetailViewModel: ViewModelType {
     func transform(input: Input) -> Output {
         
         volumeSliderValue
-            .subscribe(onNext: { self.alarm.volume = $0})
+            .subscribe(onNext: { self.alarm.volume = $0 })
+            .disposed(by: disposeBag)
+        
+        input.activeDays
+            .subscribe(onNext: { self.alarm.activeDays = $0 })
             .disposed(by: disposeBag)
         
         input.closeButtonTap

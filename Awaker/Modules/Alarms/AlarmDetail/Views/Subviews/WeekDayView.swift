@@ -7,6 +7,8 @@
 
 import UIKit
 
+import RxSwift
+
 final class WeekDayView: NLView {
     
     // MARK: - Properties
@@ -15,19 +17,24 @@ final class WeekDayView: NLView {
         weekDay
     }
     
-    var isSelected: Bool {
+    private var isSelected: Bool {
         didSet {
             setSeleted()
+            viewDidChange.onNext(weekDay)
         }
     }
     
+    private let viewDidChange: PublishSubject<WeekDay>
     private let weekDay: WeekDay
     private let shortTitleLabel = UILabel()
     
     
     // MARK: - Init
     
-    init(weekDay: WeekDay) {
+    init(weekDay: WeekDay,
+         didChangeObserver: PublishSubject<WeekDay>) {
+        
+        viewDidChange = didChangeObserver
         isSelected = weekDay.isWorkDay
         self.weekDay = weekDay
         super.init(frame: .zero)

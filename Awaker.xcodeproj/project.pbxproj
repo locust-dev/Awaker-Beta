@@ -1095,10 +1095,10 @@
 				19B844A127DB4FD900203A23 /* Core */,
 				193684A627D64E5A00BC6631 /* Common */,
 				1983D7A227D8C19D003D56D8 /* Modules */,
-				DFBCAC3B27D380F400A58DDF /* Assets.xcassets */,
 				DFBCAC3D27D380F400A58DDF /* LaunchScreen.storyboard */,
 				19C20A3E27D775350087ABD5 /* R.generated.swift */,
 				19B8446627DB4DC300203A23 /* GoogleService-Info.plist */,
+				DFBCAC3B27D380F400A58DDF /* Assets.xcassets */,
 				DFBCAC4027D380F400A58DDF /* Info.plist */,
 			);
 			path = Awaker;

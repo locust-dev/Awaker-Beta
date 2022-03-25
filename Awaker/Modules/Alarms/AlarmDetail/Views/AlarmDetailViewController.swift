@@ -39,6 +39,8 @@ final class AlarmDetailViewController: NLViewController {
     // MARK: - Drawing
     
     private func drawSelf() {
+        
+        weekDayGetter.startSubscribing()
     
         tableView.isScrollEnabled = false
         tableView.register([
@@ -115,13 +117,10 @@ final class AlarmDetailViewController: NLViewController {
     
     private func bind() {
         
-        
         let input = AlarmDetailViewModel.Input(
             name: alarmNameTextView.rx.text.asObservable(),
             time: pickerView.rx.value.asObservable(),
-            
-            // MARK: - Как отправить ебаный эвент из вьюхи???
-            activeDays: Observable.just([]),
+            activeDays: weekDayGetter.selectedWeekDays.asObservable(),
             terminateMethod: Observable.just(nil),
             sound: Observable.just("новый звук"),
             closeButtonTap: closeButton.rx.tap.asDriver(),

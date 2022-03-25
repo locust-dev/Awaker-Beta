@@ -61,4 +61,12 @@ enum WeekDay: CaseIterable {
         }
     }
     
+    static let workDays: [WeekDay] = [
+        .monday,
+        .tuesday,
+        .wednesday,
+        .thursday,
+        .friday
+    ]
+    
 }
