@@ -9,6 +9,7 @@ import UIKit
 
 enum AlarmDetailTableViewItem {
     
+    case name(configurator: TableCellConfigurator<AlarmNameCell, AlarmNameCell.Model>)
     case volume(configurator: TableCellConfigurator<AlarmVolumeCell, AlarmVolumeCell.Model>)
     case sound(configurator: TableCellConfigurator<AlarmTitleCell, AlarmTitleCell.Model>)
     case task(configurator: TableCellConfigurator<AlarmTitleCell, AlarmTitleCell.Model>)
@@ -17,6 +18,9 @@ enum AlarmDetailTableViewItem {
     var configurator: TableCellConfiguratorProtocol {
         
         switch self {
+            
+        case .name(configurator: let configurator):
+            return configurator
             
         case .volume(configurator: let configurator):
             return configurator

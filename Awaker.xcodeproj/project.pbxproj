@@ -152,6 +152,8 @@
 		19C95A5627E3321900A31746 /* VIewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C95A5527E3321900A31746 /* VIewModelType.swift */; };
 		19CBD91327EDCFFF008A4D69 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19CBD91227EDCFFF008A4D69 /* Images.xcassets */; };
 		19CBD91527EDD178008A4D69 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19CBD91427EDD178008A4D69 /* Colors.xcassets */; };
+		19CBD91727EDD26F008A4D69 /* AlarmNameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CBD91627EDD26F008A4D69 /* AlarmNameCell.swift */; };
+		19CBD91927EDD66B008A4D69 /* AlarmTimePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CBD91827EDD66B008A4D69 /* AlarmTimePicker.swift */; };
 		669A4F81CE0A0D48A5F1FF04 /* Pods_Awaker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A2F9B67D5129FDC4A9B6D6F /* Pods_Awaker.framework */; };
 		DF02E82E27EA2273001F99BD /* AlarmListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF02E82D27EA2273001F99BD /* AlarmListRouter.swift */; };
 		DFBCAC3327D380F300A58DDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBCAC3227D380F300A58DDF /* AppDelegate.swift */; };
@@ -277,6 +279,8 @@
 		19C95A5527E3321900A31746 /* VIewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIewModelType.swift; sourceTree = "<group>"; };
 		19CBD91227EDCFFF008A4D69 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		19CBD91427EDD178008A4D69 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		19CBD91627EDD26F008A4D69 /* AlarmNameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmNameCell.swift; sourceTree = "<group>"; };
+		19CBD91827EDD66B008A4D69 /* AlarmTimePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmTimePicker.swift; sourceTree = "<group>"; };
 		4D1879FD57F00FF4B6B22836 /* Pods_Awaker_debug.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Awaker_debug.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		62142B4683D5629263BA366D /* Pods-Awaker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Awaker.debug.xcconfig"; path = "Target Support Files/Pods-Awaker/Pods-Awaker.debug.xcconfig"; sourceTree = "<group>"; };
 		7A2F9B67D5129FDC4A9B6D6F /* Pods_Awaker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Awaker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -349,6 +353,7 @@
 		1914FE2E27ECB37E00D698CB /* Subviews */ = {
 			isa = PBXGroup;
 			children = (
+				19CBD91827EDD66B008A4D69 /* AlarmTimePicker.swift */,
 				19559B2D27EA3830000F467E /* WeekDayView.swift */,
 				1914FE3027ECB7A400D698CB /* WeekDaysGetter.swift */,
 			);
@@ -571,6 +576,7 @@
 				19559B3027EA4CC6000F467E /* AlarmVolumeCell.swift */,
 				19559B3227EA4E78000F467E /* AlarmTitleCell.swift */,
 				19559B3427EA4E88000F467E /* AlarmRepeatDelayCell.swift */,
+				19CBD91627EDD26F008A4D69 /* AlarmNameCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -1362,6 +1368,7 @@
 				19C20C7727D78A8E0087ABD5 /* UIViewController+Modal.swift in Sources */,
 				19C20CC527D78A9B0087ABD5 /* String + Size.swift in Sources */,
 				19B844AF27DB95CB00203A23 /* CommonTableView.swift in Sources */,
+				19CBD91927EDD66B008A4D69 /* AlarmTimePicker.swift in Sources */,
 				19B844A527DB53B000203A23 /* ProfileViewModel.swift in Sources */,
 				19C20C8227D78A8E0087ABD5 /* String+Sizes.swift in Sources */,
 				DF02E82E27EA2273001F99BD /* AlarmListRouter.swift in Sources */,
@@ -1369,6 +1376,7 @@
 				19C20BE527D7899C0087ABD5 /* DataConverterInput.swift in Sources */,
 				19559B2727EA29FE000F467E /* Alarm.swift in Sources */,
 				193684BC27D64EE400BC6631 /* AlertAction.swift in Sources */,
+				19CBD91727EDD26F008A4D69 /* AlarmNameCell.swift in Sources */,
 				193684AB27D64E7F00BC6631 /* NSObject.swift in Sources */,
 				19559AE327E9E975000F467E /* AlarmListViewController.swift in Sources */,
 				19559AE027E9E975000F467E /* AlarmListSectionModel.swift in Sources */,
