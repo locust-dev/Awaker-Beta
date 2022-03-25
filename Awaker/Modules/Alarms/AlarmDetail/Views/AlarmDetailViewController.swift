@@ -12,6 +12,13 @@ import RxCocoa
 
 final class AlarmDetailViewController: NLViewController {
     
+    private enum Locals {
+        
+        static let mainBackground = "#1A0837"
+
+    }
+    
+    
     // MARK: - Properties
     
     var viewModel: AlarmDetailViewModel!
@@ -49,11 +56,7 @@ final class AlarmDetailViewController: NLViewController {
             AlarmRepeatDelayCell.self
         ])
         
-        view.setGradientBackground(
-            with: [Colors.lightPurple(), Colors.darkPurple()],
-            startPoint: CGPoint(x: 0, y: 0),
-            endPoint: CGPoint(x: 1, y: 0)
-        )
+        view.backgroundColor = UIColor(hex: Locals.mainBackground)
         
         let daysStack = UIStackView(arrangedSubviews: weekDayGetter.allWeekDayViews)
         daysStack.spacing = 12
@@ -68,13 +71,14 @@ final class AlarmDetailViewController: NLViewController {
         alarmNameTextView.textColor = .white
         alarmNameTextView.font = UIFont.systemFont(ofSize: 18)
         
+      //  closeButton.setImage(<#T##image: UIImage?##UIImage?#>, for: <#T##UIControl.State#>)
+        closeButton.layer.cornerRadius = 8
+        closeButton.backgroundColor = .white.withAlphaComponent(0.15)
         closeButton.setTitleColor(.black, for: .normal)
-        closeButton.setTitle("Х", for: .normal)
-        closeButton.backgroundColor = .yellow
         
+        saveButton.layer.cornerRadius = 8
+        saveButton.backgroundColor = .white.withAlphaComponent(0.15)
         saveButton.setTitleColor(.black, for: .normal)
-        saveButton.setTitle("Save", for: .normal)
-        saveButton.backgroundColor = .white
         
         view.addSubview(alarmNameTextView)
         view.addSubview(closeButton)
@@ -85,11 +89,11 @@ final class AlarmDetailViewController: NLViewController {
         
         closeButton.autoPinEdge(toSuperviewEdge: .top, withInset: 20)
         closeButton.autoPinEdge(toSuperviewEdge: .left, withInset: 20)
-        closeButton.autoSetDimensions(to: CGSize(width: 22, height: 22))
+        closeButton.autoSetDimensions(to: CGSize(width: 44, height: 44))
         
         saveButton.autoPinEdge(toSuperviewEdge: .top, withInset: 20)
         saveButton.autoPinEdge(toSuperviewEdge: .right, withInset: 20)
-        saveButton.autoSetDimensions(to: CGSize(width: 100, height: 22))
+        saveButton.autoSetDimensions(to: CGSize(width: 44, height: 44))
         
         alarmNameTextView.autoPinEdge(.top, to: .bottom, of: closeButton, withOffset: 30)
         alarmNameTextView.autoPinEdge(toSuperviewEdge: .left, withInset: 20)
@@ -121,8 +125,11 @@ final class AlarmDetailViewController: NLViewController {
             name: alarmNameTextView.rx.text.asObservable(),
             time: pickerView.rx.value.asObservable(),
             activeDays: weekDayGetter.selectedWeekDays.asObservable(),
+            
+            // TODO: - Доделать и додумать
             terminateMethod: Observable.just(nil),
             sound: Observable.just("новый звук"),
+            
             closeButtonTap: closeButton.rx.tap.asDriver(),
             saveButtonTap: saveButton.rx.tap.asDriver()
         )
