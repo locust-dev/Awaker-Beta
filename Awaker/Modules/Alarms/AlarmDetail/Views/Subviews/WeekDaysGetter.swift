@@ -15,7 +15,7 @@ final class WeekDaysGetter {
         weekDayViews
     }
     
-    let selectedWeekDays = BehaviorSubject(value: WeekDay.workDays)
+    let selectedWeekDays = PublishSubject<[WeekDay]>()
     
     private let weekDayDidChange: PublishSubject<WeekDay>
     private let weekDayViews: [WeekDayView]

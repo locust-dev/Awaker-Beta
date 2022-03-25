@@ -17,7 +17,7 @@ final class WeekDayView: NLView {
         weekDay
     }
     
-    private var isSelected: Bool {
+    var isSelected: Bool = false {
         didSet {
             setSeleted()
             viewDidChange.onNext(weekDay)
@@ -35,7 +35,6 @@ final class WeekDayView: NLView {
          didChangeObserver: PublishSubject<WeekDay>) {
         
         viewDidChange = didChangeObserver
-        isSelected = weekDay.isWorkDay
         self.weekDay = weekDay
         super.init(frame: .zero)
         shortTitleLabel.text = weekDay.shortDayTitle

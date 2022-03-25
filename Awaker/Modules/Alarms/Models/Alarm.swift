@@ -30,6 +30,7 @@ struct Alarm {
 // MARK: - Default alarm init
 extension Alarm {
     
+    /// Здесь данные для создания любого нового будильник по умолчанию
     init() {
         name = "Новый будильник"
         time = Date(timeIntervalSince1970: 1648302920)

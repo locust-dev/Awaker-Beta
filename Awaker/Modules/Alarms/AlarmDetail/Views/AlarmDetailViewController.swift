@@ -128,8 +128,11 @@ final class AlarmDetailViewController: NLViewController {
         
         let output = viewModel.transform(input: input)
         
-        output.initialTime
-            .subscribe(onNext: { self.pickerView.selectedTime.onNext($0) })
+        output.alarm
+            .subscribe(onNext: {
+                self.pickerView.selectedTime.onNext($0.time)
+                self.weekDayGetter.selectedWeekDays.onNext($0.activeDays)
+            })
             .disposed(by: disposeBag)
         
         output.cells

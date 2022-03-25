@@ -101,7 +101,7 @@ extension AlarmDetailViewModel: ViewModelType {
     }
     
     struct Output {
-        let initialTime: Observable<Date>
+        let alarm: Observable<Alarm>
         let cells: Driver<[AlarmDetailTableViewItem]>
     }
     
@@ -116,7 +116,9 @@ extension AlarmDetailViewModel: ViewModelType {
             .disposed(by: disposeBag)
         
         input.activeDays
-            .subscribe(onNext: { self.alarm.activeDays = $0 })
+            .subscribe(onNext: {
+                print($0)
+                self.alarm.activeDays = $0 })
             .disposed(by: disposeBag)
         
         input.closeButtonTap
@@ -145,7 +147,7 @@ extension AlarmDetailViewModel: ViewModelType {
             })
             .disposed(by: disposeBag)
         
-        return Output(initialTime: Observable.just(alarm.time),
+        return Output(alarm: Observable.just(alarm),
                       cells: tableViewItems.asDriver(onErrorJustReturn: []))
     }
     
