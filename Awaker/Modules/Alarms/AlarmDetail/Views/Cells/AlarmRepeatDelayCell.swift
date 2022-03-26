@@ -27,6 +27,7 @@ final class AlarmRepeatDelayCell: CellWithSpacing {
     
     private func drawSelf() {
         
+        titleLabel.text = "Повтор сигнала (в разработке)"
         titleLabel.font = MainFont.regular.withSize(14)
         titleLabel.textColor = .white
     
@@ -43,10 +44,10 @@ extension AlarmRepeatDelayCell: Configurable {
     
     struct Model {
         
-        let title: String
+        
     }
     
     func configure(with model: Model) {
-        titleLabel.text = model.title
+        
     }
 }

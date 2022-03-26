@@ -17,8 +17,10 @@ final class WeekDaysGetter {
     
     let selectedWeekDays = PublishSubject<[WeekDay]>()
     
+    private var initialSubscription: Disposable?
     private let weekDayDidChange: PublishSubject<WeekDay>
     private let weekDayViews: [WeekDayView]
+    
     private let disposeBag = DisposeBag()
     
     
@@ -39,6 +41,14 @@ final class WeekDaysGetter {
     // MARK: - Public methods
     
     func startSubscribing() {
+        
+        selectedWeekDays
+            .subscribe(onNext: { selectedWeekDays in
+                self.weekDayViews.forEach {
+                    $0.isSelected = selectedWeekDays.contains($0.getWeekDay)
+                }
+            })
+            .disposed(by: disposeBag)
         
         weekDayDidChange
             .withLatestFrom(selectedWeekDays) { ($0, $1) }

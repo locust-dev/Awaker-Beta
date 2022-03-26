@@ -22,7 +22,7 @@ final class AlarmDetailViewModel {
     
     // MARK: - Cell binders
     
-    private let volumeSliderValue = PublishSubject<Float>()
+    private let volumeSliderValue: BehaviorSubject<Float>
     private let alarmName: BehaviorSubject<String?>
     
     
@@ -34,11 +34,13 @@ final class AlarmDetailViewModel {
             let emptyAlarm = Alarm()
             self.alarm = emptyAlarm
             alarmName = BehaviorSubject(value: emptyAlarm.name)
+            volumeSliderValue = BehaviorSubject(value: emptyAlarm.volume)
             return
         }
 
         self.alarm = alarm
         alarmName = BehaviorSubject(value: alarm.name)
+        volumeSliderValue = BehaviorSubject(value: alarm.volume)
     }
     
     
@@ -49,22 +51,22 @@ final class AlarmDetailViewModel {
         typealias Item = AlarmDetailTableViewItem
         
         typealias VolumeCellConfigurator = TableCellConfigurator<AlarmVolumeCell, AlarmVolumeCell.Model>
-        let volumeRowModel = AlarmVolumeCell.Model(title: "Громкость", sliderValue: volumeSliderValue)
+        let volumeRowModel = AlarmVolumeCell.Model(sliderValue: volumeSliderValue)
         let volumeRowConfigurator = VolumeCellConfigurator(item: volumeRowModel)
         let volumeRowItem = Item.volume(configurator: volumeRowConfigurator)
         
         typealias SoundCellConfigurator = TableCellConfigurator<AlarmTitleCell, AlarmTitleCell.Model>
-        let soundRowModel = AlarmTitleCell.Model(title: "Мелодия")
+        let soundRowModel = AlarmTitleCell.Model(title: "Мелодия (в разработке)")
         let soundRowConfigurator = SoundCellConfigurator(item: soundRowModel)
         let soundRowItem = Item.sound(configurator: soundRowConfigurator)
         
         typealias TaskCellConfigurator = TableCellConfigurator<AlarmTitleCell, AlarmTitleCell.Model>
-        let taskRowModel = AlarmTitleCell.Model(title: "Задача")
+        let taskRowModel = AlarmTitleCell.Model(title: "Задача (в разработке)")
         let taskRowConfigurator = TaskCellConfigurator(item: taskRowModel)
         let taskRowItem = Item.task(configurator: taskRowConfigurator)
         
         typealias RepeatDelayCellConfigurator = TableCellConfigurator<AlarmRepeatDelayCell, AlarmRepeatDelayCell.Model>
-        let repeatDelayRowModel = AlarmRepeatDelayCell.Model(title: "Повтор сигнала")
+        let repeatDelayRowModel = AlarmRepeatDelayCell.Model()
         let repeatDelayRowConfigurator = RepeatDelayCellConfigurator(item: repeatDelayRowModel)
         let repeatDelayRowItem = Item.repeatDelay(configurator: repeatDelayRowConfigurator)
         
@@ -116,9 +118,7 @@ extension AlarmDetailViewModel: ViewModelType {
             .disposed(by: disposeBag)
         
         input.activeDays
-            .subscribe(onNext: {
-                print($0)
-                self.alarm.activeDays = $0 })
+            .subscribe(onNext: { self.alarm.activeDays = $0 })
             .disposed(by: disposeBag)
         
         input.closeButtonTap

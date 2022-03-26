@@ -36,7 +36,7 @@ extension Alarm {
         time = Date(timeIntervalSince1970: 1648302920)
         activeDays = [.monday, .tuesday]
         terminateMethod = nil
-        volume = 0.2
+        volume = 0.7
         sound = "Какой то звук"
         repeatDelay = 10
     }

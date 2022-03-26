@@ -40,9 +40,15 @@ final class AlarmNameCell: CellWithSpacing {
     
     private func drawSelf() {
         
+        let cleanView = UIButton()
+        cleanView.setImage(Images.closeButtonIcon(), for: .normal)
+        cleanView.addTarget(self, action: #selector(crossTap), for: .touchUpInside)
+        
         textField.backgroundColor = .clear
         textField.textColor = .white
         textField.font = MainFont.regular.withSize(14)
+        textField.rightView = cleanView
+        textField.rightViewMode = .always
     
         contentView.backgroundColor = .white.withAlphaComponent(0.15)
         contentView.layer.cornerRadius = 8
@@ -50,6 +56,15 @@ final class AlarmNameCell: CellWithSpacing {
         
         textField.autoPinEdgesToSuperviewEdges(with: UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16))
     }
+    
+    
+    // MARK: - Actions
+    
+    @objc private func crossTap() {
+        textField.text = ""
+        textField.becomeFirstResponder()
+    }
+    
 }
 
 extension AlarmNameCell: Configurable {
@@ -62,9 +77,9 @@ extension AlarmNameCell: Configurable {
     func configure(with model: Model) {
         
         let disposeBag = DisposeBag()
-        
+    
         model.name
-            .subscribe(onNext: { self.textField.text = $0 })
+            .bind(to: textField.rx.text)
             .disposed(by: disposeBag)
         
         textField.rx.text
