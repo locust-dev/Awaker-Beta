@@ -63,7 +63,7 @@ final class WeekDayView: NLView {
     }
     
     
-    // MARK: - Privat methods
+    // MARK: - Private methods
     
     private func setSeleted() {
         shortTitleLabel.font = isSelected ? MainFont.regular.withSize(22) : MainFont.regular.withSize(20)

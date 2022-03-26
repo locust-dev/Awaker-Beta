@@ -24,6 +24,7 @@ final class AlarmDetailViewModel {
     
     private let volumeSliderValue: BehaviorSubject<Float>
     private let alarmName: BehaviorSubject<String?>
+    private let repeatDelay: BehaviorSubject<Int?>
     
     
     // MARK: - Init
@@ -35,12 +36,14 @@ final class AlarmDetailViewModel {
             self.alarm = emptyAlarm
             alarmName = BehaviorSubject(value: emptyAlarm.name)
             volumeSliderValue = BehaviorSubject(value: emptyAlarm.volume)
+            repeatDelay = BehaviorSubject(value: emptyAlarm.repeatDelay)
             return
         }
 
         self.alarm = alarm
         alarmName = BehaviorSubject(value: alarm.name)
         volumeSliderValue = BehaviorSubject(value: alarm.volume)
+        repeatDelay = BehaviorSubject(value: alarm.repeatDelay)
     }
     
     
@@ -66,7 +69,7 @@ final class AlarmDetailViewModel {
         let taskRowItem = Item.task(configurator: taskRowConfigurator)
         
         typealias RepeatDelayCellConfigurator = TableCellConfigurator<AlarmRepeatDelayCell, AlarmRepeatDelayCell.Model>
-        let repeatDelayRowModel = AlarmRepeatDelayCell.Model()
+        let repeatDelayRowModel = AlarmRepeatDelayCell.Model(repeatDelay: repeatDelay)
         let repeatDelayRowConfigurator = RepeatDelayCellConfigurator(item: repeatDelayRowModel)
         let repeatDelayRowItem = Item.repeatDelay(configurator: repeatDelayRowConfigurator)
         
@@ -108,6 +111,12 @@ extension AlarmDetailViewModel: ViewModelType {
     }
     
     func transform(input: Input) -> Output {
+        
+        repeatDelay
+            .subscribe(onNext: {
+                print($0)
+                self.alarm.repeatDelay = $0 })
+            .disposed(by: disposeBag)
         
         alarmName
             .subscribe(onNext: { self.alarm.name = $0 })

@@ -51,7 +51,7 @@ final class AlarmDetailViewController: NLViewController {
         tableView.allowsSelection = false
         tableView.separatorStyle = .none
         tableView.backgroundColor = .clear
-        tableView.rowHeight = 52
+        tableView.rowHeight = 60
         tableView.isScrollEnabled = false
         tableView.register([
             AlarmNameCell.self,
