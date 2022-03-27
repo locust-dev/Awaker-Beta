@@ -164,6 +164,7 @@
 		DF02E82E27EA2273001F99BD /* AlarmListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF02E82D27EA2273001F99BD /* AlarmListRouter.swift */; };
 		DF56070727EBAEE800F81D50 /* WeeklyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF56070627EBAEE800F81D50 /* WeeklyView.swift */; };
 		DF56070B27EBBDF200F81D50 /* UIView+Glowing.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF56070A27EBBDF200F81D50 /* UIView+Glowing.swift */; };
+		DFA11DDF27F0BF73001EFFD8 /* Date+hour.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA11DDE27F0BF73001EFFD8 /* Date+hour.swift */; };
 		DFBCAC3327D380F300A58DDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBCAC3227D380F300A58DDF /* AppDelegate.swift */; };
 		DFBCAC3C27D380F400A58DDF /* AppIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFBCAC3B27D380F400A58DDF /* AppIcon.xcassets */; };
 		DFBCAC3F27D380F400A58DDF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFBCAC3D27D380F400A58DDF /* LaunchScreen.storyboard */; };
@@ -302,6 +303,7 @@
 		DF02E82D27EA2273001F99BD /* AlarmListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmListRouter.swift; sourceTree = "<group>"; };
 		DF56070627EBAEE800F81D50 /* WeeklyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyView.swift; sourceTree = "<group>"; };
 		DF56070A27EBBDF200F81D50 /* UIView+Glowing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Glowing.swift"; sourceTree = "<group>"; };
+		DFA11DDE27F0BF73001EFFD8 /* Date+hour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+hour.swift"; sourceTree = "<group>"; };
 		DFBCAC2F27D380F300A58DDF /* Awaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Awaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFBCAC3227D380F300A58DDF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFBCAC3B27D380F400A58DDF /* AppIcon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AppIcon.xcassets; sourceTree = "<group>"; };
@@ -449,6 +451,7 @@
 				193684AF27D64EBC00BC6631 /* UIViewController+StatusBar.swift */,
 				193684AA27D64E7F00BC6631 /* NSObject.swift */,
 				DF56070A27EBBDF200F81D50 /* UIView+Glowing.swift */,
+				DFA11DDE27F0BF73001EFFD8 /* Date+hour.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1431,6 +1434,7 @@
 				19C20C7127D78A8E0087ABD5 /* UIApplication+AppVersion.swift in Sources */,
 				19C20CBC27D78A9B0087ABD5 /* NLButton.swift in Sources */,
 				19C20CBE27D78A9B0087ABD5 /* NLTextField.swift in Sources */,
+				DFA11DDF27F0BF73001EFFD8 /* Date+hour.swift in Sources */,
 				19C20C7A27D78A8E0087ABD5 /* UIEdgeInsets.swift in Sources */,
 				19559AE627E9E975000F467E /* AlarmDetailViewModel.swift in Sources */,
 				19C20A3F27D775350087ABD5 /* R.generated.swift in Sources */,
