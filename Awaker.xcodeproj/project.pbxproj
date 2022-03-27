@@ -88,6 +88,7 @@
 		19B844B727DB969500203A23 /* ProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B844B327DB969500203A23 /* ProgressHUD.swift */; };
 		19B844B827DB969500203A23 /* Loadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B844B427DB969500203A23 /* Loadable.swift */; };
 		19B844BA27DB96AB00203A23 /* RefreshControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B844B927DB96AB00203A23 /* RefreshControl.swift */; };
+		19BD2FD327EF70A100217342 /* AlarmRepeatDelayPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BD2FD227EF70A100217342 /* AlarmRepeatDelayPicker.swift */; };
 		19C20A3F27D775350087ABD5 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C20A3E27D775350087ABD5 /* R.generated.swift */; };
 		19C20BE227D7899C0087ABD5 /* SJCenterFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C20BCB27D7899B0087ABD5 /* SJCenterFlowLayout.swift */; };
 		19C20BE327D7899C0087ABD5 /* CollectionCellConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C20BCC27D7899B0087ABD5 /* CollectionCellConfigurator.swift */; };
@@ -224,6 +225,7 @@
 		19B844B327DB969500203A23 /* ProgressHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressHUD.swift; sourceTree = "<group>"; };
 		19B844B427DB969500203A23 /* Loadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Loadable.swift; sourceTree = "<group>"; };
 		19B844B927DB96AB00203A23 /* RefreshControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefreshControl.swift; sourceTree = "<group>"; };
+		19BD2FD227EF70A100217342 /* AlarmRepeatDelayPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmRepeatDelayPicker.swift; sourceTree = "<group>"; };
 		19C20A3E27D775350087ABD5 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		19C20BCB27D7899B0087ABD5 /* SJCenterFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJCenterFlowLayout.swift; sourceTree = "<group>"; };
 		19C20BCC27D7899B0087ABD5 /* CollectionCellConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionCellConfigurator.swift; sourceTree = "<group>"; };
@@ -371,6 +373,7 @@
 		1914FE2E27ECB37E00D698CB /* Subviews */ = {
 			isa = PBXGroup;
 			children = (
+				19BD2FD227EF70A100217342 /* AlarmRepeatDelayPicker.swift */,
 				19CBD91827EDD66B008A4D69 /* AlarmTimePicker.swift */,
 				19559B2D27EA3830000F467E /* WeekDayView.swift */,
 				1914FE3027ECB7A400D698CB /* WeekDaysGetter.swift */,
@@ -1377,6 +1380,7 @@
 				19B844B727DB969500203A23 /* ProgressHUD.swift in Sources */,
 				19C20BE327D7899C0087ABD5 /* CollectionCellConfigurator.swift in Sources */,
 				193684A927D64E6800BC6631 /* DispatchQueue.swift in Sources */,
+				19BD2FD327EF70A100217342 /* AlarmRepeatDelayPicker.swift in Sources */,
 				193684B327D64EBC00BC6631 /* UIViewController+StatusBar.swift in Sources */,
 				19C20CC427D78A9B0087ABD5 /* ButtonWithTouchArea.swift in Sources */,
 				19C20C7527D78A8E0087ABD5 /* UIView+DisableAutoResMaskForSubviews.swift in Sources */,

@@ -19,8 +19,7 @@ final class WeekDayView: NLView {
     
     var isSelected: Bool = false {
         didSet {
-            setSeleted()
-            viewDidChange.onNext(weekDay)
+             setSeleted()
         }
     }
     
@@ -49,7 +48,7 @@ final class WeekDayView: NLView {
         addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tap)))
         
         shortTitleLabel.textAlignment = .center
-        shortTitleLabel.font = MainFont.regular.withSize(22)
+        shortTitleLabel.font = MainFont.regular.withSize(20)
         shortTitleLabel.textColor = isSelected ? UIColor(hex: "#9E75EE") : .white
         
         addSubview(shortTitleLabel)
@@ -60,13 +59,14 @@ final class WeekDayView: NLView {
     // MARK: - Actions
     
     @objc private func tap() {
-        isSelected.toggle()
+        viewDidChange.onNext(weekDay)
     }
     
     
-    // MARK: - Privat methods
+    // MARK: - Private methods
     
     private func setSeleted() {
+        shortTitleLabel.font = isSelected ? MainFont.regular.withSize(22) : MainFont.regular.withSize(20)
         shortTitleLabel.textColor = isSelected ? UIColor(hex: "#9E75EE") : .white
     }
 }

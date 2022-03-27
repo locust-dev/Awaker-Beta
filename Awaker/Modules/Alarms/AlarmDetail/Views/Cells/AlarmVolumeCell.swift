@@ -40,6 +40,9 @@ final class AlarmVolumeCell: CellWithSpacing {
     
     private func drawSelf() {
         
+        slider.tintColor = UIColor(hex: "#865BC7")
+        
+        titleLabel.text = "Громкость"
         titleLabel.font = MainFont.regular.withSize(14)
         titleLabel.textColor = .white
         
@@ -55,7 +58,7 @@ final class AlarmVolumeCell: CellWithSpacing {
         slider.autoPinEdgesToSuperviewEdges(with: UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 16),
                                             excludingEdge: .left)
         
-        slider.autoPinEdge(.left, to: .right, of: titleLabel, withOffset: 20)
+        slider.autoPinEdge(.left, to: .right, of: titleLabel, withOffset: 30)
     }
     
 }
@@ -64,15 +67,16 @@ extension AlarmVolumeCell: Configurable {
     
     struct Model {
         
-        let title: String
-        let sliderValue: PublishSubject<Float>
+        let sliderValue: BehaviorSubject<Float>
     }
     
     func configure(with model: Model) {
         
         let disposeBag = DisposeBag()
         
-        titleLabel.text = model.title
+        model.sliderValue
+            .bind(to: slider.rx.value)
+            .disposed(by: disposeBag)
     
         slider.rx.value
             .bind(to: model.sliderValue)
