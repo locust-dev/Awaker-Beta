@@ -67,7 +67,6 @@ final class AlarmCell: NLTableViewCell {
         super.layoutSubviews()
         containerView.setGradientBackground(with: [Locas.leftGradientColor, Locas.rightGradientColor],
                                             endPoint: CGPoint(x: 1, y: 0))
-        
     }
     
     
@@ -77,8 +76,6 @@ final class AlarmCell: NLTableViewCell {
         
         backgroundColor = .clear
         selectionStyle = .none
-        
-        
         
         containerView.layer.cornerRadius = 12
         containerView.clipsToBounds = true
@@ -135,9 +132,5 @@ final class AlarmCell: NLTableViewCell {
     @objc private func didTapSwitcher() {
         isActive = !isActive
     }
-    
-//    func bind(to viewModel: AlarmListViewModel?) {
-//        
-//    }
     
 }

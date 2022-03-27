@@ -26,6 +26,7 @@ final class AlarmListViewController: NLViewController {
                                                      action: nil)
     
     private let navigationTitle = UILabel()
+    private let navigationSubtitle = UILabel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,23 +53,15 @@ final class AlarmListViewController: NLViewController {
         output?.title
             .drive(navigationTitle.rx.text)
             .disposed(by: disposeBag)
+        
+        output?.subtitle
+            .drive(navigationSubtitle.rx.text)
+            .disposed(by: disposeBag)
     }
     
     private func drawSelf() {
         
-        rightBarButtonItem.tintColor = .white
-        navigationItem.rightBarButtonItem = rightBarButtonItem
-        
-        navigationTitle.font = MainFont.semiBold.withSize(18)
-        navigationTitle.textColor = .white
-        
-        navigationController?.navigationBar.addSubview(navigationTitle)
-        
-        navigationTitle.autoPinEdgesToSuperviewEdges(with: UIEdgeInsets(top: 0,
-                                                                        left: 20,
-                                                                        bottom: 0,
-                                                                        right: 0),
-                                                     excludingEdge: .right)
+        drawNavigationBar()
         
         view.backgroundColor = Colors.darkPurple()
         
@@ -78,5 +71,28 @@ final class AlarmListViewController: NLViewController {
         view.addSubview(tableView)
         
         tableView.autoPinEdgesToSuperviewEdges()
+    }
+    
+    private func drawNavigationBar() {
+        
+        rightBarButtonItem.tintColor = .white
+        navigationItem.rightBarButtonItem = rightBarButtonItem
+        
+        navigationTitle.font = MainFont.semiBold.withSize(18)
+        navigationTitle.textColor = .white
+        
+        navigationSubtitle.font = MainFont.light.withSize(16)
+        navigationSubtitle.textColor = .white
+        
+        navigationController?.navigationBar.addSubview(navigationTitle)
+        navigationController?.navigationBar.addSubview(navigationSubtitle)
+        
+        navigationTitle.autoPinEdge(toSuperviewEdge: .top)
+        navigationTitle.autoPinEdge(toSuperviewEdge: .left, withInset: 20)
+        
+        navigationSubtitle.autoPinEdge(.top, to: .bottom, of: navigationTitle)
+        navigationSubtitle.autoPinEdge(.left, to: .left, of: navigationTitle)
+        navigationSubtitle.autoPinEdge(toSuperviewEdge: .bottom)
+        
     }
 }
